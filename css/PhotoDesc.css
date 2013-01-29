@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+#ScenePhotoDesc {
+	position : absolute;
+	z-index : 1;
+	left : 670px; top : 34px;
+	width :540px;
+	background-color : transparent;
+}
+.view_title .text_title {
+	overflow:hidden;
+	width:532px; padding:0 0 3px 8px;
+	color:#08313e; font-size:38px; text-overflow: ellipsis; white-space : nowrap;
+}
+.view_title .text_date {
+	margin-left:13px;
+	color:#50879f; font-size:20px;
+}
+.view_title .description {
+	color:#333; font-size:20px; line-height:1.1; 
+}
+/*.view_title .inner {
+	width:488px; height:70px; padding:5px 8px;
+}*/
+.view_title .inner {
+    width: 488px; padding:5px 8px;height:70px;
+	 white-space:-moz-pre-wrap; white-space:-o-pre-wrap; word-break:break-all;
+}
+ 
+.view_title .focus {
+	border:7px solid #f77125; padding:0 !important;
+	width:506px !important; height:82px !important;
+}
+.view_title .focus .inner {
+	border:1px solid #c94313;
+}

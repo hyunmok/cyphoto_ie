@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/PhotoSlide.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+<script type="text/javascript" src="../js/jquery-1.4.4.js"></script>
+<script type="text/javascript"> 
+function ani() {
+	$('#ul_photo li').animate({left:-1130}, 600, 'swing', function(){
+		});
+}
+function re_ani() {
+	$('#ul_photo li').animate({left:0}, 600, 'swing', function(){
+		});
+}
+</script>
+</head>
+<body>
+
+
+	<!-- 슬라이드-->
+	<div id="ScenePhotoSlide">
+		<div class="photo_slide">
+			<!-- 원본폭맞춤 시에는 photo_view_zoom 클래스 추가해 주세요^^ -->
+			<div class="photo_view photo_view_zoom">
+				<!-- 가로가 긴 사진은 width="528" -->
+				<img src="../image/img/img_null3.png" width="528" alt="" />
+				<!-- 세로가 긴 사진은 width="528" -->
+				<img src="../image/img/img_null4.png" height="528" alt="" />
+			</div>
+			<!-- 원본폭맞춤시 보여지는 레이어 컨트롤 -->
+			<div class="photo_view_ctl">
+				<!-- 포커시 되면 아래 처럼 class에 focus 추가해 주세요^^ -->
+				<div class="top focus"></div>
+				<div class="right"></div>
+				<div class="down"></div>
+				<div class="left focus"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- helpbar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<!-- 1장보기 시에 나오는 헬프바, 2장보기, 재생 부분만 다릅니다. 실작업 시에는 헬프바 영역 동일하게 하고 두 가지만 따로 수정작업 해주시면 될 것 같아요^^ -->
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key4 focus4"><img src="../image/icon/icon_help4.png" alt="" class="img_icon" /> <span class="text_icon">2장보기</span></div></li>
+				<li><div class="key5 focus5"><img src="../image/icon/icon_help1.png" alt="" class="img_icon" /> <span class="text_icon">원본폭맞춤</span></div></li>
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help8.png" alt="" class="img_icon" /> <span class="text_icon">재생</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+
+			<!-- 2장보기 시에 나오는 헬프바 -->
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key4 focus4"><img src="../image/icon/icon_help4.png" alt="" class="img_icon" /> <span class="text_icon">1장보기</span></div></li>
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help7.png" alt="" class="img_icon" /> <span class="text_icon">멈춤</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

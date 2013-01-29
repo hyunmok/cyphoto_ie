@@ -1,0 +1,42 @@
+#SceneGnb {
+	position:absolute; left:0; top:0; z-index:4; overflow:hidden;
+	width:1100px; height:100px;
+}
+.gnb .logo {
+	float:left;
+	width:148px; height:32px; margin:32px 40px 0 32px;
+	background:url("../image/icon/icon_logo.png") no-repeat left top;
+}
+.gnb .list_gnb {
+	float:left;
+	width:880px; height:100px; 
+}	
+.gnb .list_gnb li {
+	float:left;
+	width:176px; height:100px;
+	text-indent:-2000px;
+}
+.gnb .list_gnb li.myphoto {
+	background-image:url(../image/bg/bg_gnb_list0.png); background-repeat:no-repeat;
+}
+.gnb .list_gnb li.pado {
+	background-image:url(../image/bg/bg_gnb_list1.png); background-repeat:no-repeat;
+}
+.gnb .list_gnb li.people {
+	background-image:url(../image/bg/bg_gnb_list2.png); background-repeat:no-repeat;
+}
+.gnb .list_gnb li.photo {
+	background-image:url(../image/bg/bg_gnb_list3.png); background-repeat:no-repeat;
+}
+.gnb .list_gnb li.setup {
+	background-image:url(../image/bg/bg_gnb_list4.png); background-repeat:no-repeat;
+}
+.gnb .list_gnb li.basic{
+	background-position:0 0;
+}
+.gnb .list_gnb li.focus {
+	background-position:0 -100px;
+}
+.gnb .list_gnb li.select {
+	background-position:0 -200px;
+}

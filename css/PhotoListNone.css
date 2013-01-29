@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+#ScenePhotoListNone {
+	position:absolute; left:32px; top:100px; z-index:1; overflow:hidden; 
+	width:1216px; height:527px;
+}
+.photo_none .description {
+	padding:160px 0 0 0;
+	color:#666; font-size:26px; text-align:center;
+}
+.photo_none .box_img {
+	width:124px; margin:12px auto 0 auto;
+}
+.photo_none .focus {
+	outline:7px solid #F77125;
+}
+.photo_none .focus .inner {
+	width:122px; border:1px solid #C94313;
+}
+.photo_none .nav_folder {
+	overflow:hidden;
+	padding:23px 0 0 56px;
+	color:#333; font-size:20px;
+}

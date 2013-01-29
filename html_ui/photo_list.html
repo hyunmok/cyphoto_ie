@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/PhotoList.css" />
+<link rel="stylesheet" type="text/css" href="../css/Gnb.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+<link rel="stylesheet" type="text/css" href="../css/PhotoListNone.css" />
+<link rel="stylesheet" type="text/css" href="../css/Loading.css" />
+<link rel="stylesheet" type="text/css" href="../css/Folder.css" />
+<script type="text/javascript" src="../js/jquery-1.4.4.js"></script>
+<script type="text/javascript"> 
+function ani() {
+	$('#ul_photo li').animate({left:-1130}, 600, 'swing', function(){
+		});
+}
+function re_ani() {
+	$('#ul_photo li').animate({left:0}, 600, 'swing', function(){
+		});
+}
+</script>
+</head>
+<body>
+	<!-- 방글이 로딩 이미지 -->
+	<div id="SceneLoading">
+		<img src="../image/img/img_loading.gif" alt="" />
+	</div>
+
+	<!-- gnb -->
+	<div id="SceneGnb">
+		<div class="gnb">
+			<div class="logo"></div>
+			<ul class="list_gnb">
+				<li class="myphoto basic">내사진첩</li>
+				<li class="pado basic">파도타기</li>
+				<li class="people basic">피플</li>
+				<li class="photo focus">포토</li>
+				<li class="setup select">설정</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 사진첩 리스트 -->
+	<div id="ScenePhotoList" style="display:none;">
+		<div class="myphoto_list">
+			<div class="nav_folder">
+				<span>사용자</span>님의 사진첩 &gt; <span>전체보기</span>
+			</div>
+
+			<div class="photo_list" style="display:block;">
+				<!-- 리스트 이전,다음 보기 관련해서 list_prev, list_next는 그대로 두시고 뒤에 새롭게 클래스 추가해주세요^^-->
+				<!-- 아래 예시처럼 _off, _on 으로 작업했습니다. -->
+				<div class="list_prev list_prev_off" onclick="re_ani();"></div>
+				<div class="box_album_list">
+					<ul class="album_list" id="ul_photo">
+					<!-- 포커스 되면 class="focus" 추가해 주세요 -->
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_null4.png" alt="" width="310" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">영화도쿄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>21</strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second focus">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<!-- 이미지가 없거나 오류난 경우, 아래 주소의 이미지 사용해 주세요 -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" height="300" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">[스크랩]이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>999</strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_null2.png" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">스크랩] 이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num1"><strong>1999</strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_null1.png" alt="" width="310" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">영화도쿄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>21</strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second focus">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<!-- 이미지가 없거나 오류난 경우, 아래 주소의 이미지 사용해 주세요 -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" height="300" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">[스크랩]이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>999</strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_null2.png" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">스크랩] 이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num1"><strong>1999</strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_null1.png" alt="" width="310" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">영화도쿄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>21</strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second focus">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<img src="../image/img/img_null2.png" alt="" height="300" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">[스크랩]이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<div class="num"><strong>999</strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_null2.png" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title">스크랩] 이상형찾기룰 루나도찾아주엄</div>
+									<div class="date">2010.08.30 AM 08:40</div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num1"><strong>1999</strong></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list_next list_next_on" onclick="ani();"></div>
+				<div class="text_sum" style="display:block;">
+					<span class="num">1/425</span> <span class="total">(총1280장)</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 사진이 없는 경우 -->
+	<div id="ScenePhotoListNone">
+		<div class="photo_none">
+			<div class="nav_folder">
+				<span>사용자</span>님의 사진첩 &gt; <span>전체보기</span>
+			</div>
+			<div class="description">등록된 사진이 없습니다.</div>
+			<div class="box_img focus">
+				<div class="inner"><img src="../image/btn/btn_folder.png" alt="" /></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 20110317, dim 영역 수정 되었습니다. -->
+	<!-- 폴더 선택 레이어 -->
+	<div id="SceneFolder" style="display:none;">
+		<div class="popup_select_folder">
+			<div class="popup_top">
+				<img src="../image/text/title_folder_select.png" alt="사진첩 폴더 선택" />
+			</div>
+			<div class="popup_contents"> 
+				<ul class="list_select_folder">
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li>전체보기 <span class="text_num">9999</span> <!-- <img src="../image/icon/icon_new.png" alt="new" /> --></li>
+					<li class="focus">폴더명을 입력하세요 <span class="text_view">(일촌공개)</span> <span class="text_num">22</span></li>
+					<li>폴더명을 입력하세요 <span class="text_view">(비공개)</span> <span class="text_num">22</span></li>
+					<li>폴더명을 입력하세요 <span class="text_view">(전체공개)</span> <span class="text_num">1</span></li>
+					<li>폴더명을 입력하세요 <span class="text_view">(일촌공개)</span> <span class="text_num">999</span></li>
+					<li>폴더명을 입력하세요 <span class="text_view">(비공개)</span> <span class="text_num">1299</span></li>
+				</ul>
+				<div class="box_scroll">
+					<!-- css에 주석 처리 해놓았는데요, 드래그 이미지 top:-20px ~ 340px 까지 조절해주시면 되어요^^ -->
+					<div class="scroll">
+						<img src="../image/btn/btn_drag.png" alt="" class="img_drag" />
+					</div>
+					<!-- 포커스시, 아래처럼 focus 클래스 추가해 주세요^^ -->
+					<div class="bg_scroll focus">
+						<div>
+							<!-- 이 내부에 div랑 a 태그 추가해 주세요. -->
+						</div>
+						</div>
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li><span class="text_icon">닫기</span></li>
+					<li class="focus"><span class="text_icon">확인</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div>
+	</div>
+
+	<!-- helpbar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key4 focus4"><img src="../image/icon/icon_help4.png" alt="" class="img_icon" /> <span class="text_icon">폴더선택</span></div></li>
+				<li><div class="key5 focus5"><img src="../image/icon/icon_help2.png" alt="" class="img_icon" /> <span class="text_icon">슬라이드쇼</span></div></li>
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help5.png" alt="" class="img_icon" /> <span class="text_icon">이전</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/ConfigNotice.css" />
+<link rel="stylesheet" type="text/css" href="../css/Config.css" />
+<link rel="stylesheet" type="text/css" href="../css/Logout.css" />
+<link rel="stylesheet" type="text/css" href="../css/Gnb.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+</head>
+<body>
+	<!-- gnb -->
+	<div id="SceneGnb">
+		<div class="gnb">
+			<div class="logo"></div>
+			<ul class="list_gnb">
+				<li class="myphoto basic">내사진첩</li>
+				<li class="pado basic">파도타기</li>
+				<li class="people basic">피플</li>
+				<li class="photo focus">포토</li>
+				<li class="setup select">설정</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 설정 선택 -->
+	<div id="SceneConfig">
+		<div class="box_config">
+			<div class="title">
+				본인 사진첩 공개 설정
+			</div>
+			<p class="notice">
+				여러명이 함께 시청하는 TV사용자들의 사생활 보호를 위한 <strong>내사진 보기 권한 설정</strong>입니다.<br />
+				해당 설정 내용은 TV에서만 적용 됩니다.<br />
+				<strong>본인 사진첩 공개 설정내용은 확인과 수정을 위해서 비밀번호 확인이 필요합니다.</strong><br />
+			</p>
+			<!-- 포커스되면 class="btn_password focus" 처럼 focus 클래스 추가해 주세요^^ -->
+			<div class="btn_password focus">
+				<div class="inner">
+					비밀번호 확인하기
+				</div>
+			</div>
+			<!-- 로그인 하기 전 -->
+			<!-- 아래 ul class="list_setup select" 의 display 와 연동해서 작동시켜 주세요. -->
+			<ul class="list_setup none" style="display:block;">
+				<li>
+					<div class="box_input">
+						<input type="radio" class="relation" />
+					</div>
+					<div class="box_info">
+						<img src="../image/icon/icon_view_setup1_none.png" alt="" class="img_character" />
+						<span class="text1">사생활 전체 공개 :</span>
+						<span class="text2">본인 사진첩 <span class="view_all">전체공개</span>, <span class="view_1chon">일촌공개</span>, <span class="view_secret">비공개</span> 모든사진 보기</span>
+					</div>
+				</li>
+				<li>
+				<div class="box_input">
+					<input type="radio" class="relation"" />
+				</div>
+				<div class="box_info">
+					<img src="../image/icon/icon_view_setup2_none.png" alt="" class="img_character" />
+					<span class="text1">사생활 보호 :</span>
+					<span class="text2">본인 사진첩 <span class="view_all">전체공개</span> 사진만 보기</span>
+				</div>
+				</li>
+			</ul>
+			<!-- 로그인 했을때 -->
+			<ul class="list_setup select" style="display:none;">
+				<!-- 포커스 되는 리스트에 아래처럼 focus 클래스 추가해 주세요^^ -->
+				<li class="focus">
+					<div class="box_input">
+						<input type="radio" class="relation" />
+					</div>
+					<div class="box_info">
+						<img src="../image/icon/icon_view_setup1_select.png" alt="" class="img_character" />
+						<span class="text1">사생활 전체 공개 :</span>
+						<span class="text2">본인 사진첩 <span class="view_all">전체공개</span>, <span class="view_1chon">일촌공개</span>, <span class="view_secret">비공개</span> 모든사진 보기</span>
+					</div>
+				</li>
+				<li class="">
+				<div class="box_input">
+					<input type="radio" class="relation" />
+				</div>
+				<div class="box_info">
+					<img src="../image/icon/icon_view_setup2_select.png" alt="" class="img_character" />
+					<span class="text1">사생활 보호 :</span>
+					<span class="text2">본인 사진첩 <span class="view_all">전체공개</span> 사진만 보기</span>
+				</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 로그아웃 영역 -->
+	<div id="SceneLogout">
+		<div class="box_logout">
+			<span class="title">
+				로그아웃
+			</span>
+			<span class="notice">
+				싸이월드 사진첩 자동인증 정보를 삭제하고 로그아웃합니다.
+			</span>
+			<!-- 포커스되면 class="btn_logout focus" 처럼 focus 클래스 추가해 주세요^^ -->
+			<div class="btn_logout focus">
+				<div class="inner">
+					로그아웃
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 버전정보 -->
+	<div id="SceneConfigNotice">
+		<div class="box_config_notice">
+			<div class="text_info">
+				<span class="title">
+					버전정보
+				</span>
+				<span class="version">
+					Ver. 1.0 (2010.12.16)
+				</span>
+			</div>
+			<div class="copyright">
+				Copyright ⓒ
+				<span class="point1">
+					SK
+				</span>
+				<span class="point2">
+					Communications.
+				</span>
+				All right reserved.
+			</div>
+		</div>
+	</div>
+
+	<!-- helpbar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help5.png" alt="" class="img_icon" /> <span class="text_icon">이전</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

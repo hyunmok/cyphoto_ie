@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+#ScenePhotoDescView {
+	position:relative; left:0; top:0;
+}
+.popup_photo_desc_view {
+	position:absolute; left:668px; top:36px; z-index:12;
+	width:533px; height:575px;
+}
+.popup_photo_desc_view .popup_desc_view {
+	padding:19px 0 35px 19px;
+	background:url("../image/popup/popup_photo_desc_view.png") no-repeat center top;
+}
+.popup_photo_desc_view .popup_desc_view .title {
+	color:#14596f; font-size:30px;text-overflow: ellipsis; white-space : nowrap;overflow:hidden;margin-right:60px;
+	text-overflow: ellipsis; white-space : nowrap;overflow:hidden;margin-right:60px; 
+}
+.popup_photo_desc_view .popup_desc_view .date {
+	margin:0 0 0 3px;
+	color:#50879f; font-size:20px;
+}
+.popup_photo_desc_view .popup_desc_view .box {
+	position:relative;
+	width:514px; height:375px;
+}
+.popup_photo_desc_view .popup_desc_view .wrap_contents {
+	position: absolute; left:0; top:23px; overflow: hidden; 
+	width:435px; height:354px;
+	clip: rect(0px, 435px, 354px, 0px);
+	white-space:-moz-pre-wrap; white-space:-o-pre-wrap; word-break:break-all;
+}
+.popup_photo_desc_view .popup_desc_view .contents {
+	position:absolute; 
+	width:435px;
+	color:#333; font-size:20px; line-height:1.1;
+}
+.popup_photo_desc_view .popup_bottom {
+	background:url("../image/popup/popup_photo_desc_view_bottom.png") no-repeat center top;
+}
+
+/* scroll */
+.popup_photo_desc_view .box_scroll {
+	position:absolute; left:450px; top:23px;
+	width:40px;
+}
+.popup_photo_desc_view .box_scroll .bg_scroll {
+	position:absolute; 
+	width:40px; height:360px;
+	background:url("../image/bg/bg_scroll.png") no-repeat center top;
+}
+.popup_photo_desc_view .box_scroll .bg_scroll.focus {
+	background:url("../image/bg/bg_scroll_focus.png") no-repeat center top;
+}
+.popup_photo_desc_view .box_scroll .scroll {
+	position:absolute; left:0; top:-20px /* 340px */; z-index:2000;
+	width:40px; height:40px;
+}
+.popup_photo_desc_view .box_scroll .scroll img {
+	position:absolute; left:0; top:0;
+}
+.popup_photo_desc_view .box_scroll .bg_scroll .ui-slider {
+ position:absolute;
+ width:40px; height:360px;
+}
+
+/* popup, helpbar */
+.popup_bottom .list_helpbar {
+	overflow:hidden;
+	margin:0 26px 0 0;
+}
+.popup_bottom .list_helpbar li {
+	float:right;
+	width:108px; height:48px; padding:22px 0 0 0; border:none;
+	color:#fff; text-align:center; font-size:24px;
+}
+.popup_bottom .list_helpbar li.focus {
+	background:url("../image/popup/bg_popup_helpbar2_focus.png") no-repeat left top;
+}
+
+.dim {
+	position:absolute; z-index:8; left:0; top:0;
+	width:1280px; height:720px;
+	background:#000;
+	opacity:0.7;
+}

@@ -1,0 +1,73 @@
+
+
+
+
+<script type='text/javascript'>
+
+car = function(c){
+
+	this.color = c;
+
+	this.run = function(){
+		alert(this.color);
+	}
+}
+
+var matiz = new car('red');
+
+function t(){
+
+	try{
+		alert(a);
+	}catch(e){
+		alert(e.message);
+		return;
+	}finally{
+		alert('fin');
+	}
+}
+
+// alert(car===car.prototype.superclass);
+
+/*
+car.prototype.constructor =>
+
+function(c){
+	this.color = c;
+	this.run = function(){
+		alert(this.color);
+	}
+}
+
+
+
+car.prototype =>
+
+[object Object]
+
+
+
+car.constructor =>
+
+function Function() {
+    [native code]
+}
+
+
+
+car.constructor.prototype =>
+
+function prototype() {
+    [native code]
+}
+
+for(p in car){
+	alert(p);
+}
+*/
+
+//skFn.debug.check(matiz,'matiz',true);
+
+</script>
+
+<body onclick='t()'>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#SceneConfigNotice {
+	position : absolute;
+	left:199px; top:553px;
+}
+.box_config_notice {
+	overflow:hidden;
+	width:811px; height:39px; padding:10px 35px 0 35px;
+	background:hsla(0,0%,100%,0.3);
+	color:#666666; font-size:18px;
+}
+.box_config_notice .text_info {
+	float:left;
+	width:318px;
+}
+.box_config_notice .copyright {
+	float:left;
+}
+.box_config_notice .text_info .title {
+	margin-right:12px;
+	color:#404040; font-size:25px;
+}
+.box_config_notice .text_info .version {
+	position:relative; top:-3px;
+}
+.box_config_notice .copyright .point1 {
+	color:#ff2324;
+}
+.box_config_notice .copyright .point2 {
+	color:#ff6f1e;
+}

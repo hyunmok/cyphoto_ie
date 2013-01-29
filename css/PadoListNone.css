@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+#ScenePadoListNone {
+	position : absolute;
+	left : 32px; top:185px;
+	width:1216px;
+}
+.box_none_pado_view {
+	position : relative;
+	left:0; top:155px;
+	color:#666; font-size:26px; text-align:center; 
+}
+.text_search_result {
+	margin:0 0 0 29px;
+	color:#333; font-size:26px;
+}
+.text_search_result span {
+	color:#50879f;
+}

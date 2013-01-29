@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+#SceneLogin {
+	position : absolute;
+	left:154px; top:165px;
+}
+.box_login {
+	width:449px; margin:0 0 0 7px;
+}
+.box_login .login_top {
+	margin:0 0 31px 0;
+}
+.box_login .login_top .login_top_nate {
+	overflow:hidden;
+	width:449px; height:70px;
+}
+.box_login .info {
+	margin:0 0 17px 3px;
+	color:#444; font-size:20px;
+}
+.box_login .login_input input {
+	height:57px; border:1px solid #aeaeae;
+	color:#ababab; font-size:22px; 
+}
+.box_login .login_input .input_type1 {
+	float:left;
+	margin:0 10px 10px 0;
+}
+.box_login .login_input .input_text1 {
+	width:188px; padding:0 5px; 
+	background:#fff url("../image/bg/bg_input_text1.png") no-repeat left top;
+}
+.box_login .login_input .input_text1_1 {
+	background:#fff url("../image/bg/bg_input_text1_1.png") no-repeat left top;
+}
+.box_login .login_input .input_type2 {
+	float:left;
+	margin:0 0 10px 0;
+}
+.box_login .login_input .input_text2 {
+	width:122px; padding:0 5px;
+	background:#fff url("../image/bg/bg_input_text2.png") no-repeat left top;
+}
+.box_login .login_input .input_type3 {
+	clear:both;
+	width:344px; margin:0 0 20px 0;
+}
+.box_login .login_input .input_text3 {
+	width:332px; padding:0 5px;
+	background:#fff url("../image/bg/bg_input_text3.png") no-repeat left top;
+}
+.box_login .login_input .input_text3_1 {
+	background:#fff url("../image/bg/bg_input_text3_1.png") no-repeat left top;
+}
+.box_login .login_input .input_type4 {
+	position:absolute;
+	left:360px; top:140px;
+}
+.box_login .login_input .input_type5 {
+	width:344px;
+	margin:0 10px 10px 0;
+}
+.box_login .login_input .input_text5 {
+	width:332px; padding:0 5px; 
+	background:#fff url("../image/bg/bg_input_text5.png") no-repeat left top;
+}
+.box_login .login_input .input_text5_1 {
+	background:#fff url("../image/bg/bg_input_text5_1.png") no-repeat left top;
+}
+.box_login .login_input .login_check {
+	overflow:hidden;
+	width:420px;
+}
+.box_login .login_input .login_check .box_radio {
+	float:left;
+	color:#ababab; font-size:22px;
+	height:43px; padding:5px 0 0 48px; margin:0 45px 0 0;
+	background:url("../image/icon/icon_login_check_none.png") no-repeat left top;
+}
+.box_login .login_input .login_check .box_radio.check {
+	color:#666;
+	background:url("../image/icon/icon_login_check.png") no-repeat left top;
+}
+.box_login .login_input .login_check .box_radio input {
+	display:none;
+}
+.box_login .login_input .login_check .box_radio.focus {
+    outline: none;
+}
+.box_login .login_input .login_check .box_radio.focus .inner {
+    outline:5px solid #f77125;
+}
+
+.box_login .login_input .focus {
+	outline:7px solid #f77125;
+}
+.box_login .login_input .focus input {
+	border:1px solid #c94313;
+	/* background:#fff url("../image/bg/bg_input_common.png") repeat-x left top; */
+}
+.box_login .login_input .focus img {
+	border:1px solid #c94313;
+}
+
+.layer_email {
+	position:absolute; z-index:4; left:217px; top:141px;
+}
+.layer_email .list_email {
+	width:132px; height:232px; padding:1px 1px 0 1px;
+	background:#fff url("../image/bg/bg_layer_email.png") no-repeat left top;
+}
+.layer_email .list_email li {
+	width:128px; height:53px; padding:2px 2px 3px 2px;
+	color:#989898; font-size:22px;
+}
+.layer_email .list_email li .inner {
+	width:124px; height:38px; padding:14px 0 0 4px;
+}
+.layer_email .list_email li .inner {
+	width:124px; height:38px; padding:14px 0 0 4px;
+}
+.layer_email .list_email li.focus {
+	outline:none;
+}
+.layer_email .list_email li.focus .inner {
+	color:#fff;
+	background:#f17424;
+}
+.layer_email .list_email li .inner .text_icon {
+	position:relative; left:20px; top:-1px;
+	font-size:20px;
+}

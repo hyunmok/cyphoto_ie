@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+	
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoSort.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoSelect.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoListNone.css" />
+	
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>
+	
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+ 	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LgImeComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PopupComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/GnbComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>	
+	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PadoModel.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PadoController.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/zone/pado_list.js'></script>
+
+<?
+} else {
+?>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoSort.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoSelect.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PadoListNone.css" />
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/pado_list-min_live.js'></script>
+<?
+}
+?>
+
+	<script type='text/javascript'>
+
+		skFn.dom.addEvent(window, 'load', init);
+				
+		index_temp = 20;
+		
+		function init(){
+			skFn.console.off();
+			skFn.console.setupConsole({consoleTop:292, consoleOpacity:0.5, consoleWidth:320, consoleHeight:300});
+
+			skTv.zone.init();
+			
+			skTv.zone.show('PadoSort');			
+			skTv.zone.show('PadoList');			
+			
+			//========== Gnb Display==========
+			GnbComponent.setFunctionKey("skTv.keymap.RED", "PadoController.ShowFanList(0);");
+			GnbComponent.setFunctionKey("skTv.keymap.GREEN", "PadoController.ShowOnedegPopup();");
+			GnbComponent.setFunctionKey("skTv.keymap.RETURN", "navigation.gotoAppManage();");
+			GnbComponent.setFunctionKey("skTv.keymap.RW", "PadoController.MoveLeft('M');"); 
+			GnbComponent.setFunctionKey("skTv.keymap.FF", "PadoController.MoveRight('M');"); 
+			GnbComponent.setReturnZone("PadoSort");
+			GnbComponent.show(GnbComponent);
+			
+			//========== Helpbar Display==========
+           
+            var arrMenuInfo = new Array();
+			
+            arrMenuInfo.push({icon:"icon_help4",name:"팬보기", action:"PadoController.ShowFanList(0);"});
+            arrMenuInfo.push({icon:"icon_help1",name:"일촌검색", action:"PadoController.ShowOnedegPopup();"});
+            arrMenuInfo.push({icon:"icon_help5",name:"이전", action:"navigation.gotoAppManage();"});   
+			arrMenuInfo.push({icon:'icon_help6',name:'나가기', action:'navigation.gotoExit();'}); 
+			     
+            HelpComponent.show(arrMenuInfo);			
+			
+            
+			LoadingComponent.init();
+
+			//skTv.zone.focus('PadoSort');
+			
+		}				
+		
+		
+		
+	</script>
+
+</head>
+
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+
+	<!-- View Start -->
+
+	<!-- 상단 일촌/팬 선택 영역-->
+	<div id="ScenePadoSort">
+		<div id='pado_sort' class="pado_sort">
+			<!-- 모션 리모콘으로 작동시에만 오버 효과 class 추가해 주세요^^ -->
+			<!--div class="box_select" style="display:block;"-->
+			<div class="box_select" style="visibility:visible;">
+				<!-- 포커스 되면 아래 처럼 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+				<div id="SortIndex19" class="btn_select">
+					<!-- <div class="inner">일촌</div>-->
+				</div>
+			</div>
+
+			<div class="box_pado_sort">
+				<ul class="list_view_select">
+					<!-- 처음과 마지막 클래스 꼭 붙여주세요. -->
+					<!-- 포커스 되면 first와 last 클래스에 focus 추가해 주세요^^ -->
+					<!-- 모션 리모콘으로 작동시에만 오버 효과 class 적용해 주세요^^ -->
+					<li id="SortIndex20" class="first"><div class="inner">전체보기</div></li>
+					<li id="SortIndex21"><div class="inner">ㄱ</div></li>
+					<li id="SortIndex22"><div class="inner">ㄴ</div></li>
+					<li id="SortIndex23"><div class="inner">ㄷ</div></li>
+					<li id="SortIndex24"><div class="inner">ㄹ</div></li>
+					<li id="SortIndex25"><div class="inner">ㅁ</div></li>
+					<li id="SortIndex26"><div class="inner">ㅂ</div></li>
+					<li id="SortIndex27"><div class="inner">ㅅ</div></li>
+					<li id="SortIndex28"><div class="inner">ㅇ</div></li>
+					<li id="SortIndex29"><div class="inner">ㅈ</div></li>
+					<li id="SortIndex30"><div class="inner">ㅊ</div></li>
+					<li id="SortIndex31"><div class="inner">ㅋ</div></li>
+					<li id="SortIndex32"><div class="inner">ㅌ</div></li>
+					<li id="SortIndex33"><div class="inner">ㅍ</div></li>
+					<li id="SortIndex34"><div class="inner">ㅎ</div></li>
+					<li id="SortIndex35" class="last"><div class="inner">기타</div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 위의 일촌/팬 선택 버튼 누르면 뜨는 레이어 -->
+	<!--div id="ScenePadoSelect" style="display:none;"-->
+	<div id="ScenePadoSelect" style="visibility:hidden;">
+		<div class="layer_select">
+			<ul>
+				<li class="first focus">일촌</li>
+				<li class="">팬(관심홈피)</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 일촌/팬 목록 -->
+	<!--div id="ScenePadoList" style="display:block;"-->
+	<div id="ScenePadoList" style="visibility:visible;">
+		<div class="pado_list">
+			<!-- 검색 결과 보여주는 경우에는 아래 div display:block 으로 조절해주세요^^ -->
+			<!--div id="text_search_list" class="text_search_result" style="display:none;"-->
+			<div id="text_search_list" class="text_search_result" style="visibility:hidden;">
+				<!--<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">3</span>건-->
+			</div>
+			<div class="box_contents">
+				<div id="move_left" class="list_prev list_prev_off"></div>
+				<div class="wrap_list_pado">
+					<div id="ul_list_pado" class="box_list_pado">
+						<!-- Controller에서 처리 -->
+					</div>
+				</div>
+				<div id="move_right" class="list_next list_next_off"></div>
+				<div id="page_info" class="text_pado_num">
+					<!--<span class="num">1/21</span> <span class="sum">(전체 285명)</span>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 일촌 / 혹은 팬이 없는 경우 -->
+	<!--div id="ScenePadoListNone" style="display:none;"-->
+	<div id="ScenePadoListNone" style="visibility:hidden;">
+	<!-- 검색 결과 보여주는 경우에는 아래 div display:block 으로 조절해주세요^^ -->
+		<!--div id="text_search_none" class="text_search_result" style="display:none;"-->
+		<div id="text_search_none" class="text_search_result" style="visibility:hidden;">
+			<!--<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">0</span>건-->
+		</div>
+		<div id="none_result" class="box_none_pado_view">
+			<!-- 일촌이 없습니다.--> 
+			<!-- 팬(관심홈피)이 없습니다. -->
+		</div>
+	</div>
+	
+	
+	
+	<!-- View End -->
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleSearchList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleSearchListNone.css" />
+	
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<!--<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>-->
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>	
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+ 	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+		
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LgImeComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PopupComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/GnbComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>
+		
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PeopleModel.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PeopleController.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/zone/people_list.js'></script>	
+	<script type='text/javascript' language='javascript' src='http://lg.tvapp.nate.com/lg/cyphoto/js/people/peopleHTML.js'></script>
+	
+<?
+} else {
+?>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleSearchList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PeopleSearchListNone.css" />
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/people_list-min_live.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/people/peopleHTML.js'></script>
+<?
+}
+?>
+
+	<script type="text/javascript"> 
+
+		skFn.dom.addEvent(window, 'load', init);
+		
+		function init(){
+			
+			skFn.console.off();
+			skFn.console.setupConsole({consoleHeight: 300, consoleTop:127, consoleOpacity:0.8});
+			
+			skTv.zone.init();
+			
+			skTv.zone.show('PeopleList');
+			skTv.zone.show('PeopleSearchList');
+			
+			//========== Gnb Display==========
+			GnbComponent.setFunctionKey("skTv.keymap.BLUE", "PeopleController.ShowSearchPopup();");
+			GnbComponent.setFunctionKey("skTv.keymap.RETURN", "navigation.gotoAppManage();"); 
+			GnbComponent.setFunctionKey("skTv.keymap.RW", "PeopleController.MoveLeft('M');"); 
+			GnbComponent.setFunctionKey("skTv.keymap.FF", "PeopleController.MoveRight('M');"); 
+			GnbComponent.setReturnZone("PeopleList");			
+			GnbComponent.show(GnbComponent);
+		
+			//========== Helpbar Display==========
+           
+            var arrMenuInfo = new Array();
+			
+            arrMenuInfo.push({icon:"icon_help1",name:"검색", action:"PeopleController.ShowSearchPopup();"});            
+            arrMenuInfo.push({icon:"icon_help5",name:"이전", action:"navigation.gotoAppManage();"});
+			arrMenuInfo.push({icon:'icon_help6',name:'나가기', action:'navigation.gotoExit();'}); 
+			           
+            HelpComponent.show(arrMenuInfo);			
+			
+            //========== Helpbar Display==========
+			LoadingComponent.init(); 
+			skTv.zone.focus('PeopleList');
+			
+		}
+		
+		
+	
+	</script>
+</head>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+	<!-- 기본 보여지는 피플 영역 -->
+	<!--div id="ScenePeopleList" style="display:block;"-->
+	<div id="ScenePeopleList" style="visibility:visible;">
+		<div class="people_list">
+			<div id="move_left" class="list_prev list_prev_off"></div>
+			<div class="wrap_list_people">
+				<div class="box_list_people" id="list_people">
+					
+					<!--Controller에서 처리-->
+					
+				</div>
+			</div>
+			<div id="move_right" class="list_next list_next_off"></div>
+			<div id="page_info" class="text_pado_num">
+				<!--<span class="num">1/21</span> <span class="sum">(전체 285명)</span>-->
+			</div>
+		</div>
+	</div>
+
+	<!-- 피플 검색 결과 -->
+	<!--div id="ScenePeopleSearchList" style="display:none;"-->
+	<div id="ScenePeopleSearchList" style="visibility:hidden;">
+		<div class="people_search_list">
+			<!-- 검색 결과 보여주는 경우에는 아래 div display:block 으로 조절해주세요^^ -->
+			<!--div id="search_result" class="text_search_result" style="display:block;"-->
+			<div id="search_result" class="text_search_result">
+				<!--<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">3</span>건-->
+			</div>
+			<div id="ul_list_people" class="box_contents">
+				<!-- Controller에서 처리-->
+			</div>
+		</div>
+	</div>
+
+	<!-- 피플 검색 결과 없을때 -->
+	<!--div id="ScenePeopleSearchListNone" style="display:none;"-->
+	<div id="ScenePeopleSearchListNone" style="visibility:hidden;">
+		<div class="people_search_list_none">
+			<div id="search_result_none" class="text_search_result">
+				<!--<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">0</span>건-->
+			</div>
+			<div class="box_none_pado_view">
+				검색 결과가 없습니다.<BR/>
+				스타홈피 전체 이름으로 검색해 주세요.
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

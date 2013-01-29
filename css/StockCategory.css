@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#SceneStockCategory {
+	position : absolute;
+	left :82px; top :112px;
+}
+.box_stock_category {
+	overflow:hidden;
+}
+.box_stock_category .list_stock_category {
+	float:left;
+	width:1093px; height:46px; margin:8px;
+	background:url("../image/bg/bg_list_stock_category.png") no-repeat left top;
+}
+.box_stock_category .list_stock_category li {
+	float:left;
+	margin-left:-1px;
+	color:#333; text-align:center; font-size:20px;
+}
+.box_stock_category .list_stock_category li.first {
+	margin-left:0;
+	color:#1b5f7d;
+}
+.box_stock_category .list_stock_category li .inner {
+	width:181px; height:33px; padding:11px 1px 1px 1px;
+}
+.box_stock_category .list_stock_category li.focus {
+	outline:7px solid #f77125;
+}
+.box_stock_category .list_stock_category li.focus .inner {
+	border:1px solid #c94313; padding:10px 0 0 0;
+}
+.box_stock_category .list_stock_category li.over {
+	color:#F35719;
+}

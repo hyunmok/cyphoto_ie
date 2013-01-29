@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+#SceneReplyList {
+	position : absolute;
+	left : 670px; top : 200px;
+	width:580px;
+	background-color : transparent;
+}
+.view_comment .box_comment {
+	float:left;
+	width:520px; height:384px; margin:0 20px 0 0;
+}
+.view_comment .box_scroll {
+	float:left; position:relative;
+	width:40px;
+}
+.view_comment .reply_sum {
+	clear:both;
+	margin:0 25px 0 0;
+	text-align:right;
+}
+.view_comment .box_comment .description,
+.view_comment .box_comment .list_comment li {
+    overflow:hidden; position:relative;
+	width:504px; height:80px; padding:8px;
+	color:#333; font-size:20px;
+}
+.view_comment .box_comment .inner {
+	width:504px; height:80px;
+}
+.view_comment .box_comment .focus {
+	border:7px solid #f77125; padding:0 !important;
+	width:506px !important; height:82px !important;
+}
+.view_comment .box_comment .focus .inner {
+	border:1px solid #c94313;
+}
+.view_comment .box_comment .description .inner {
+	width:488px; height:64px; padding:8px;
+}
+.view_comment .box_comment .list_comment li .inner {
+	width:494px; height:80px; padding:0 10px 0 0;
+}
+.view_comment .box_comment .list_comment li .box_img {
+    float:left; overflow:hidden;
+    width:60px; height:60px; margin:10px 8px 10px 10px;
+}
+.view_comment .box_comment .list_comment li .box_text {
+    float:left;
+    width:414px; padding:5px 0 0 0;
+}
+.view_comment .box_comment .list_comment li .box_text .text_name {
+    float:left;
+    margin:0 7px 0 0;
+    color:#14596f; font-size:20px;
+}
+.view_comment .box_comment .list_comment li .box_text .text_date {
+    float:left;
+    color:#50879f; font-size:18px;
+}
+.view_comment .box_comment .list_comment li .box_text .text_description {
+    clear:both; width:414px; overflow:hidden;
+    color:#333; font-size:20px; line-height:1.1;
+}
+.view_comment .box_comment .list_comment li .odd {
+    background:url('../image/bg/bg_comment_odd.png') no-repeat left top;
+}
+.view_comment .box_comment .list_comment li .list_comment_reply {
+    width:474px !important; padding-left:20px !important;
+}
+.view_comment .box_comment .list_comment li .list_comment_reply .box_text {
+    width:394px;
+}
+.view_comment .reply_sum {
+	clear:both;
+	margin:0 16px 0 0;
+	font-size:20px; text-align:right;
+}
+.view_comment .reply_sum .text_num {
+	color:#1b5f7d;
+}
+.view_comment .reply_sum .text_sum {
+	color:#fff;
+}
+
+/* scroll */
+.view_comment .box_scroll .bg_scroll {
+	position:absolute;
+	width:40px; height:360px;
+	background:url("../image/bg/bg_scroll.png") no-repeat center top;
+}
+.view_comment .box_scroll .bg_scroll.focus {
+	background:url("../image/bg/bg_scroll_focus.png") no-repeat center top;
+}
+.view_comment .box_scroll .scroll {
+	position:absolute; left:0; top:-20px /* 380px */; z-index:2;
+	width:40px; height:40px;
+}
+.view_comment .box_scroll .scroll img {
+	position:absolute; left:0; top:0;
+}
+.view_comment .box_scroll .bg_scroll .ui-slider {
+ position:absolute;
+ width:40px; height:360px;
+}

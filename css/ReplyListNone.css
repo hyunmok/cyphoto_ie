@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+#SceneReplyListNone {
+	position : absolute;
+	z-index : 1;
+	left : 670px; top : 213px;
+	width :540px;
+	background-color : transparent;
+}
+ .view_comment_none {
+	width:520px; height:211px; padding:156px 0 0 0;
+	color:#666; font-size:20px; text-align:center;
+	background:url('../image/bg/bg_comment_none.png') no-repeat left top;
+}

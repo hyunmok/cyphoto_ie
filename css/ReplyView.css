@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+#SceneReplyView {
+	position:relative;
+	left:0; top:0;
+}
+.popup_reply_detail {
+	position:absolute; z-index:16; left:670px; top:196px;
+}
+.popup_reply_detail .popup_contents {
+	overflow:hidden; 
+	width:479px; height:285px; padding:23px 30px 25px 24px;
+	background:url(../image/popup/bg_popup_reply_detail.png) no-repeat left top;
+}
+.popup_reply_detail .popup_bottom {
+	background:url(../image/popup/bg_popup_reply_detail_bottom.png) no-repeat left top;
+}
+.popup_reply_detail .user_img {
+	float:left; overflow:hidden;
+	width:60px; height:60px; margin:0 15px 0 0;
+}
+.popup_reply_detail .user_text {
+	float:left; 
+	width:404px;
+}
+.popup_reply_detail .user_text .user_info {
+	padding:3px 0 10px 0;
+}
+.popup_reply_detail .user_text .user_info .user {
+	margin-right:3px;
+	color:#14596f; font-size:26px;
+}
+.popup_reply_detail .user_text .user_info .date {
+	color:#50879f; font-size:20px;
+}
+.popup_reply_detail .user_text .description {
+	white-space:-moz-pre-wrap; white-space:pre-wrap; white-space:-o-pre-wrap; word-break:break-all;
+	color:#333; font-size:20px; line-height:1.1;
+}
+.popup_bottom .list_helpbar {
+	overflow:hidden;
+	margin:0 26px 0 0;
+}
+.popup_bottom .list_helpbar li {
+	float:right;
+	width:108px; height:48px; padding:22px 0 0 0; border:none;
+	color:#fff; text-align:center; font-size:24px;
+}
+.popup_bottom .list_helpbar li.focus {
+	background:url("../image/popup/bg_popup_helpbar2_focus.png") no-repeat left top;
+}
+
+.dim {
+	position:absolute; z-index:8; left:0; top:0;
+	width:1280px; height:720px;
+	background:#000;
+	opacity:0.7;
+}

@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/PeopleList.css" />
+<link rel="stylesheet" type="text/css" href="../css/PeopleSearchList.css" />
+<link rel="stylesheet" type="text/css" href="../css/PeopleSearchListNone.css" />
+<link rel="stylesheet" type="text/css" href="../css/Gnb.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+<script type="text/javascript" src="../js/jquery-1.4.4.js"></script>
+<script type="text/javascript"> 
+function ani() {
+	$('#list_people .all_people').animate({left:-1110}, 500, 'swing', function(){
+		});
+}
+function re_ani() {
+	$('#list_people .all_people').animate({left:0}, 500, 'swing', function(){
+		});
+}
+</script>
+</head>
+<body>
+	<!-- gnb -->
+	<div id="SceneGnb">
+		<div class="gnb">
+			<div class="logo"></div>
+			<ul class="list_gnb">
+				<li class="myphoto basic">내사진첩</li>
+				<li class="pado basic">파도타기</li>
+				<li class="people basic">피플</li>
+				<li class="photo focus">포토</li>
+				<li class="setup select">설정</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 기본 보여지는 피플 영역 -->
+	<div id="ScenePeopleLIst" style="display:block;">
+		<div class="people_list">
+			<div class="list_prev list_prev_off" onclick="re_ani();"></div>
+			<div class="wrap_list_people">
+				<div class="box_list_people" id="list_people">
+					<div class="all_people">
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="all_people">
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="all_people">
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pie">
+							<div class="title">
+								토끼띠 스타
+							</div>
+							<ul class="list_people">
+								<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강승윤</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">강민경</div>
+								</li>
+								<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">김혜수</div>
+								</li>
+								<!-- 마지막 li에는 last 클래스 꼭 붙여주세요. -->
+								<li class="last" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+									<div class="inner">남규리</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list_next list_next_on" onclick="ani();"></div>
+			<div class="text_pado_num">
+				<span class="num">1/21</span> <span class="sum">(전체 285명)</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 피플 검색 결과 -->
+	<div id="ScenePeopleSearchList" style="display:none;">
+		<div class="people_search_list">
+			<!-- 검색 결과 보여주는 경우에는 아래 div display:block 으로 조절해주세요^^ -->
+			<div class="text_search_result" style="display:block;">
+				<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">3</span>건
+			</div>
+			<div class="box_contents">
+				<ul class="list_search">
+					<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>					<li class="focus" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+					<li class="" style="background-image: url(http://peopleimg.cyworld.com/thumb110x94topcenter/http://cyimg34.cyworld.com/common/file_down.asp?redirect=/340020/2011/5/11/48/mah_201105112.jpg)">
+						<div class="inner">최은정</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 피플 검색 결과 없을때 -->
+	<div id="ScenePeopleSearchListNone" style="display:none;">
+		<div class="people_search_list_none">
+			<div class="text_search_result">
+				<span class="text_search_result">"<span class="text_name">이상우</span>"</span> 검색 결과 <span class="num_search_result">0</span>건
+			</div>
+			<div class="box_none_pado_view">
+				검색 결과가 없습니다.
+			</div>
+		</div>
+	</div>
+
+	<!-- helpbar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help1.png" alt="" class="img_icon" /> <span class="text_icon">검색</span></div></li>
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help5.png" alt="" class="img_icon" /> <span class="text_icon">이전</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

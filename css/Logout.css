@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+#SceneLogout {
+	position:absolute;
+	left:199px; top:436px;
+}
+.box_logout {
+	width:811px; height:90px; padding:12px 35px 6px 35px;
+	background:hsla(0,0%,100%,0.3);
+}
+.box_logout .title {
+	margin-right:12px;
+	color:#404040; font-size:25px;
+}
+.box_logout .notice {
+	color:#666; font-size:22px;
+}
+
+.box_logout .btn_logout {
+	margin:8px 0 0 94px;
+}
+.box_logout .btn_logout .inner {
+	height:34px; width:88px; padding:9px 0 0 25px; border:1px solid #bfc3c3;
+	color:#1b5f7d; font-size:20px;
+	background:url("../image/bg/bg_btn_common.png") repeat-x left top;
+}
+.box_logout .btn_logout.focus {
+	outline:7px solid #f77125;
+	width:113px;
+}
+.box_logout .btn_logout.none .inner {
+	height:34px; width:88px; padding:9px 0 0 25px; border:1px solid #bfc3c3;
+	color:#999 !important; font-size:20px;
+	background:url("../image/bg/bg_btn_common.png") repeat-x left top;
+}
+.box_logout .focus .inner {
+	border:1px solid #c94313;
+}

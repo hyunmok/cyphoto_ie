@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#SceneNateEmail {
+	position : absolute; z-index:4; left:371px; top:306px;
+}
+.layer_email .list_email {
+	width:132px; height:232px; padding:1px 1px 0 1px;
+	background:#fff url("../image/bg/bg_layer_email.png") no-repeat left top;
+}
+.layer_email .list_email li {
+	width:128px; height:53px; padding:2px 2px 3px 2px;
+	color:#989898; font-size:22px;
+}
+.layer_email .list_email li .inner {
+	width:124px; height:38px; padding:14px 0 0 4px;
+}
+.layer_email .list_email li .inner {
+	width:124px; height:38px; padding:14px 0 0 4px;
+}
+.layer_email .list_email li.focus {
+	outline:none;
+}
+.layer_email .list_email li.focus .inner {
+	color:#fff;
+	background:#f17424;
+}
+.layer_email .list_email li .inner .text_icon {
+	position:relative; left:20px; top:-1px;
+	font-size:20px;
+}

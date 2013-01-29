@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+#SceneInputPopup {
+	position:relative; left:0; top:0;
+
+}
+.box_input_popup {
+	position:absolute; left:151px; top:165px; z-index:16;
+}
+.box_input_popup .contents {
+	height:297px; padding:34px 0 0 22px; width:451px;
+	background:url("../image/popup/bg_popup_input.png") no-repeat center top;
+}
+.box_input_popup .popup_bottom {
+	height:78px;
+	background:url("../image/popup/bg_popup_input_bottom.png") no-repeat center top;
+}
+.box_input_popup .title {
+	padding:0 0 50px 0;
+	color:#3d3d3d; font-size:33px;
+}
+.box_input_popup .warning {
+	position:absolute; left:22px; top:81px;
+	color:#f1662e; font-size:28px;
+}
+.box_input_popup .description {
+	padding:0 0 11px 3px;
+	color:#252526; font-size:20px; line-height:1.15;;
+}
+.box_input_popup input {
+	height:57px; border:1px solid #aeaeae;
+	color:#999; font-size:30px; 
+}
+.box_input_popup .input_type1 {
+	width:427px;
+}
+.box_input_popup .input_text1 {
+	width:405px; padding:0 10px; 
+	background:#fff url("../image/popup/popup_input_text1.png") no-repeat left top;
+}
+.box_input_popup .input_setup {
+	margin:5px 0 0 0;
+}
+.box_input_popup .input_setup .input_pie {
+	overflow:hidden;
+}
+.box_input_popup .input_setup .input_pie.pie2 {
+	height:59px; padding:7px 0;
+}
+.box_input_popup .input_setup .text_title {
+	float:left;
+	padding:5px 19px 0 0;
+	color:#666; font-size:22px;
+}
+.box_input_popup .input_setup .input_pie.pie2 .text_title {
+	padding-top:13px;
+}
+.box_input_popup .input_setup .text_email {
+	float:left;
+	padding:0 0 0 29px;
+	color:#f35719; font-size:26px;
+}
+.box_input_popup .input_setup .text_email {
+	float:left;
+}
+.box_input_popup .input_setup .input_type2 {
+	float:left;
+	width:;
+}
+.box_input_popup .input_setup .input_text2 {
+	width:310px; padding:0 10px; 
+	background:#fff url("../image/popup/popup_input_text2.png") no-repeat left top;
+}
+.box_input_popup .focus {
+	outline:7px solid #f77125;
+}
+.box_input_popup .focus input {
+	border:1px solid #c94313;
+	/* background:#fff url("../image/bg/bg_input_common.png") repeat-x left top; */
+}
+
+
+/* popup, helpbar */
+.popup_bottom .list_helpbar {
+	overflow:hidden;
+	margin:0 26px 0 0;
+}
+.popup_bottom .list_helpbar li {
+	float:right;
+	width:108px; height:48px; padding:22px 0 0 0; border:none;
+	color:#fff; text-align:center; font-size:24px;
+}
+.popup_bottom .list_helpbar li.focus {
+	outline:none;
+	background:url("../image/popup/bg_popup_helpbar2_focus.png") no-repeat left top;
+}
+
+.dim {
+	position:absolute; z-index:8; left:0; top:0;
+	width:1280px; height:720px;
+	background:#000;
+	opacity:0.7;
+}

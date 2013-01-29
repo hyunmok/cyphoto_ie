@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common_photo_slide.css" />
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+<?
+} else {
+?>
+	<script type='text/javascript' language='javascript' src='../js/_mini/photo_slide_null-min_live.js'></script>
+<?
+}
+?>	</head>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+	<div id="ScenePhotoSlide">
+	</div>
+</body>
+</html>
+<script type='text/javascript'>
+	var params = {
+		itemNo : 0,
+		targetId : '',
+		folderNo : '',
+		themeId : '0000',
+		itemCount : '',
+		referrer : ''	
+	}
+	//========== 변수 세팅 ==========
+
+		
+	var urlParams = {};
+	urlParams = skFn.string.parse_UrlStr();
+	
+	if(urlParams.itemNo)	params.itemNo	=	urlParams.itemNo;
+	if(urlParams.targetId)	params.targetId	=	urlParams.targetId;
+	if(urlParams.folderNo)	params.folderNo =	urlParams.folderNo;
+	if(urlParams.folderName)	params.folderName =	decodeURIComponent(urlParams.folderName);
+	
+	// memory leak 문제로 추가(5/31 by sophia)
+	if(urlParams.itemCount)	params.itemCount =	urlParams.itemCount;			// 1장보기, 2장보기
+	if(urlParams.referrer)	params.referrer =	urlParams.referrer;	
+	
+	window.setTimeout(function() {
+		navigation.gotoPhotoSlide(params.targetId, params.folderNo, params.folderName, params.itemNo, true, params.itemCount, params.referrer);
+	}, 
+	2000);
+</script>
+

@@ -1,0 +1,50 @@
+#SceneHelpbar {
+	position:absolute; left:0; top:627px; z-index:4; overflow:hidden;
+	width:1280px; height:93px;
+}
+.helpbar {
+	width:1216px; height:93px; padding:0 32px 0 32px;
+	color:#fff; font-size:25px;
+	background:transparent url(../image/bg/bg_helpbar.png) no-repeat left top;
+}
+.helpbar .user_name {
+	float:left; overflow:hidden;
+	width:360px; padding:31px 0 0 0;
+	color:#a0dae8; text-overflow: ellipsis; white-space : nowrap;
+}
+.helpbar .list_icon {
+	float:right;
+}
+.helpbar .list_icon li {
+	float:left;
+}
+.helpbar .list_icon li img {
+	vertical-align:middle;
+}
+.helpbar .list_icon li .text_icon {
+	vertical-align:middle;
+}
+.helpbar .list_icon li .key2 {
+	width:88px; padding:31px 36px;
+}
+.helpbar .list_icon li .key3 {
+	width:109px; padding:31px 36px;
+}
+.helpbar .list_icon li .key4 {
+	width:128px; padding:31px 36px;
+}
+.helpbar .list_icon li .key5 {
+	width:150px; padding:31px 36px;
+}
+.helpbar .list_icon li .focus2 {
+	background:transparent url(../image/bg/bg_key2_focus.png) no-repeat left top;
+}
+ .helpbar .list_icon li .focus3 {
+	background:transparent url(../image/bg/bg_key3_focus.png) no-repeat left top;
+}
+ .helpbar .list_icon li .focus4 {
+	background:transparent url(../image/bg/bg_key4_focus.png) no-repeat left top;
+}
+ .helpbar .list_icon li .focus5 {
+	background:transparent url(../image/bg/bg_key5_focus.png) no-repeat left top;
+}

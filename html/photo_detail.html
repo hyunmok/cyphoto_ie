@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDetail.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDesc.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyListNone.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyNameUI.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyView.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDescView.css" />
+	
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PopupComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LgImeComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PhotoListComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.widget.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.mouse.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.slider.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/ScrollComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PhotoReplyModel.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoReplyController.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoReplyLayerController.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoReplyViewController.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PhotoDetailModel.js'></script>	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PhotoModel.js'></script>	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/MinihpInfoModel.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoDetailController.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/zone/photo_detail.js'></script>
+
+<?
+} else {
+?>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDetail.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDesc.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyListNone.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyNameUI.css" />
+	<link rel="stylesheet" type="text/css" href="../css/ReplyView.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoDescView.css" />
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/photo_detail-min_live.js'></script>
+<?
+}
+?>
+
+	<script type='text/javascript'>
+		var params = {
+			itemNo : 0,
+			targetId : '',
+			folderNo : '',
+		}
+
+		skFn.dom.addEvent(window, 'load', init);
+
+		function init(){
+			skFn.console.off();
+			skFn.console.setupConsole({consoleTop:572, consoleOpacity:0.5, consoleWidth:320, consoleHeight:300});
+
+			skTv.zone.init();
+			
+		//========== 변수 세팅 ========== 
+			var urlParams = {};
+			urlParams = skFn.string.parse_UrlStr();
+
+			//photoItemSeq	=	urlParams.itemSeq;	
+			//targetTid		=	urlParams.targetId;
+
+			if(urlParams.itemNo)	params.itemNo	=	urlParams.itemNo;
+			if(urlParams.targetId)	params.targetId	=	urlParams.targetId;
+			if(urlParams.folderNo)	params.folderNo =	urlParams.folderNo;
+			if(urlParams.folderName)	params.folderName =	decodeURIComponent(urlParams.folderName);
+			
+		//========== 변수 세팅 ========== 
+
+		
+		//========== Helpbar Display==========
+		var arrMenuInfo = new Array();
+		
+		arrMenuInfo.push({icon:'icon_help2',name:'슬라이드쇼', action:'zone.PhotoDesc.handleKeyDown(skTv.keymap.GREEN);'});
+		arrMenuInfo.push({icon:'icon_help3',name:'댓글작성', action:'PhotoReplyController.show_ReplyWritepopup(\"\");'});
+		arrMenuInfo.push({icon:'icon_help5',name:'이전', action:'zone.PhotoDesc.handleKeyDown(skTv.keymap.RETURN);'});
+		arrMenuInfo.push({icon:'icon_help6',name:'나가기', action:'navigation.gotoExit();'}); 
+		
+		HelpComponent.show(arrMenuInfo);
+
+		//========== Loading Display Dom 추가==========
+			LoadingComponent.init();
+			
+		//skTv.zone.show('PhotoDetail');
+		skTv.zone.show('PhotoDesc');
+		skTv.zone.show('ReplyList');
+		//skTv.zone.show('ReplyList');
+		skTv.zone.focus('PhotoDesc');
+		}
+	</script>
+
+</head>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+
+	<!-- 사진 자세히 보기 -->
+	<div id="ScenePhotoDetail">
+		<div class="view_photo">
+			<div id="BtnPrev" class="list_prev list_prev_off"></div>
+			<div class="contents_photo">
+				<div class="nav_folder"><span id="PhotoUserName"></span>님의 사진첩 &gt; <span id = "FolderName">전체보기</span></div>
+				<div class="box_photo">
+					<table cellpadding='0' cellspacing='0'>
+						<tr>
+							<td valign="middle" align="center" height="454" width="518">
+								<!-- 이미지가 가로로 긴 경우는 img 태그에 width="518" 넣어주세요. -->
+								<!-- 이미지가 세로로 긴 경우는 img 태그에 height="454" 넣어주세요. -->
+								<img alt=""/>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="BtnNext" class="list_next list_next_off"></div>
+		</div>
+	</div>
+
+	<!-- 사진 타이틀, 내용 -->
+	<div id="ScenePhotoDesc">
+		<div class="view_title">
+			<div class="text_title"></div>
+			<div class="text_date"></div>
+			<!-- focus 됐을때 class에 focus 추가해 주세요^^ -->
+			<div class="description">
+				<p class="inner">
+					
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 댓글 리스트, 댓글 없는 경우의 display와 연동해 주세요 -->
+	<!--div id="SceneReplyList" style="display:none"-->
+	<div id="SceneReplyList" style="visibility:hidden;">
+		<div class="view_comment">
+			<div class="box_comment">
+				<ul class="list_comment">
+				<!-- 댓글 정보  -->
+				</ul>
+			</div>
+			
+			<!--div class="box_scroll" id="ReplyList_scroll" style="display:none"--> 
+			<div class="box_scroll" id="ReplyList_scroll" style="visibility:hidden;"> 
+				<div class="scroll"> 
+					<img src="../image/btn/btn_drag.png" alt="" class="img_drag" /> 
+				</div> 
+				<!-- 포커스시, 아래처럼 focus 클래스 추가해 주세요^^ --> 
+				<div class="bg_scroll">
+					<div class=""></div>
+				</div> 
+			</div> 
+
+			<!--div class="reply_sum" style="display:none"-->
+			<div class="reply_sum" style="visibility:hidden;">
+				<span class="text_num">1</span> <span class="text_sum">2</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 클릭하면 뜨는 메뉴 레이어 -->
+	<!--div id="SceneReplyNameUI" style="display:none;"-->
+	<div id="SceneReplyNameUI" style="visibility:hidden;">
+		<!-- 레이어 위치에 따라서 layer1~layer6 까지 조절해주세요. -->
+		<div class="view_layer_reply_ctl layer_list1">
+			<ul class="layer_list_menu">
+				<li id="layer_list0" class="">사진첩보기</li>
+				<li id="layer_list1">댓글보기</li>
+				<li id="layer_list2" class="">댓글쓰기</li>
+				<li id="layer_list3" class="last">삭제</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 댓글이 없는 경우 -->
+	<!--div id="SceneReplyListNone" style="display:none;"-->
+	<div id="SceneReplyListNone" style="visibility:hidden;">
+		<div class="view_comment_none">
+			등록된 댓글이 없습니다.
+		</div>
+	</div>
+
+	<!--div id="SceneDim" style="display:none;"-->
+	<div id="SceneDim" style="visibility:hidden;">
+	</div>
+	
+	<!-- 댓글 상세 보기 경우 -->
+	<!--div id="SceneReplyView" style="display:none;"-->
+	<div id="SceneReplyView" style="visibility:hidden;">
+		<div class="popup_reply_detail">
+			<div class="popup_contents"> 
+				<div class="user_img">
+				</div>
+				<div class="user_text">
+					<div class="user_info">
+						<span class="user"></span> <span class="date"></span>
+					</div>
+					<p class="description"></p>
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li class="focus"><span class="text_icon">닫기</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div> 
+	</div>
+
+	<!-- 20110317, dim 영역 수정 되었습니다. -->
+	<!-- 내용 상세 보기 경우 -->
+	<!--div id="ScenePhotoDescView" style="display:none;"-->
+	<div id="ScenePhotoDescView" style="visibility:hidden;">
+		<div class="popup_photo_desc_view">
+			<div class="popup_desc_view"><div class="title">
+				</div>
+				<div class="date"></div>
+				<div class="box">
+					<!-- 20110309, div 위치, 구조가 살짝 바뀌었습니다. -->
+					<!-- 마스크 씌우는 div -->
+					<div class="wrap_contents">
+						<div class="contents">
+						</div>
+					</div>
+					
+					<div class="box_scroll" id="PhotoDescView_scroll"> 
+						<div class="scroll"> 
+							<img src="../image/btn/btn_drag.png" alt="" class="img_drag" /> 
+						</div> 
+						<!-- 포커스시, 아래처럼 focus 클래스 추가해 주세요^^ --> 
+						<div class="bg_scroll">
+							<div class=""></div>
+						</div> 
+					</div> 
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li class=""><span class="text_icon">닫기</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div>
+	</div>
+</body>
+</html>

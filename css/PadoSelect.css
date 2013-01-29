@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#ScenePadoSelect {
+	position : absolute; left:87px; top:120px; z-index:1;
+}
+.layer_select ul {
+	width:135px; height:85px;
+	border-top:1px solid #bfc3c3; border-left:1px solid #bfc3c3; border-right:1px solid #bfc3c3; border-bottom:1px solid #708186;
+	background:#fff;
+}
+.layer_select ul li {
+	width:119px; height:31px; margin:2px; padding:8px 0 0 12px;
+	color:#1b5f7d; font-size:20px;
+}
+.layer_select ul li.first {
+	border-bottom:1px solid #dfe1e1;
+	background:url('../image/btn/btn_toggle.png') no-repeat 105px 16px;
+}
+.layer_select ul li.focus {
+	color:#fff;
+	background:#f77125;
+}
+.layer_select ul li.first.focus {
+	background:#f77125 url('../image/btn/btn_toggle_focus.png') no-repeat 105px 16px;
+}

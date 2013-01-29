@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta http-equiv="Pragma" content="no-cache" /> 
+	<meta http-equiv="expires" content="0" /> 
+	<title>cyworld</title> 
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+
+	<link rel="stylesheet" type="text/css" href="../css/common.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/NateLogin.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/CyworldLogin.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/NateEmail.css" /> 
+	
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script>
+
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/rsa.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jsbn.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/prng4.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/rng.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/base64.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/GnbComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LgImeComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/SKPLoginComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/UserModel.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/LoginModel.js'></script>
+    <script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/LoginController.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/LoginAcController.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../js/zone/login.js'></script></head> 
+
+<?
+} else {
+?>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/NateLogin.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/CyworldLogin.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/NateEmail.css" /> 
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/login-min_live.js'></script>
+<?
+}
+?>
+
+	<script type='text/javascript'>
+		skFn.dom.addEvent(window, 'load', init);
+
+		function init(){
+			skFn.console.off();
+			skFn.console.setupConsole({consoleTop:500, consoleOpacity:0.5, consoleHeight:200});
+			
+			//========== Gnb Display ==========
+			GnbComponent.show(GnbComponent);
+
+			//========== Helpbar Display ==========
+			var arrMenuInfo = new Array();
+			arrMenuInfo.push({icon:"icon_help5",name:"이전", action:"navigation.gotoAppManage();"});   
+			arrMenuInfo.push({icon:'icon_help6',name:'나가기', action:'navigation.gotoExit();'}); 
+			HelpComponent.show(arrMenuInfo);
+				
+			//========== Loading Display Dom 추가==========
+			LoadingComponent.init();
+			LoadingComponent.setLoadingImgTimer(0);
+			//========== Zone 초기화 및 Show ==========
+			skTv.zone.init();
+			
+			var urlParams = {};
+			urlParams = skFn.string.parse_UrlStr();
+			
+            LoginController = new LoginControllerClass();
+            LGImeComponent = new LGImeComponentClass();
+
+            LoginController.init(urlParams.movef);
+
+			//이메일 자동완성 추가 
+			//2012-08-10 [18:26:09] @SoonyoungPark
+			LGImeComponent.set_onAnyCharInsert(function(ch){
+				var ele = LGImeComponent.getInputObj();
+				if ($(ele).attr("type") !== 'password'){
+					if (LoginController.isShowImeAc(ch) === true){
+						if (skTv.zone.isShown("NateLogin") === true){
+							var inputId = 'n_loginid';
+						}else if (skTv.zone.isShown("CyworldLogin") === true){
+							var inputId = 'c_loginid';
+						}
+						LGImeComponent.show(skTv.zone.getCurZone(),'english',inputId, function(){});	
+						skTv.zone.show("Ac");
+						skTv.zone.focus("Ac");
+						
+					}else{
+						skTv.zone.hide("Ac");
+					}
+
+				}
+			});
+			LGImeComponent.set_onBackspace(function(){
+				var ele = LGImeComponent.getInputObj();
+				if ($(ele).attr("type") !== 'password'){
+					// 뒤에서 지웠을 때 @ 검출 로직 추가 2012-09-06 오후 08:31 by jhm
+					if(skTv.zone.isShown('Ac') == true){
+						skTv.zone.hide("Ac");
+						skTv.zone.focus("Ime");
+					}else{
+						if (LoginController.isShowImeAc() === true){
+							if (skTv.zone.isShown("NateLogin") === true){
+								var inputId = 'n_loginid';
+							}else if (skTv.zone.isShown("CyworldLogin") === true){
+								var inputId = 'c_loginid';
+							}
+							LGImeComponent.show(skTv.zone.getCurZone(),'english',inputId, function(){});	
+							skTv.zone.show("Ac");
+							skTv.zone.focus("Ac");
+						}else{
+							skTv.zone.hide("Ac");
+						}					
+					}
+				}
+			});
+		}
+	</script>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+	<div id="SceneAc" style="visibility:hidden;">
+		<input type="text" class="input_text1 ready" value=""  /><!-- 클론 input -->
+		<ul class="acwrap">
+			<li>직접입력</li>
+			<li>abcdefghtropaseg@nate.com</li>
+			<li>abcdefghtropaseg@empas.com</li>
+			<li>abcdefghtropaseg@lycos.co.kr</li>
+			<li>abcdefghtropaseg@netsgo.com</li>
+		</ul>
+	</div>
+	<!-- div id="SceneNateLogin" style="display:none;" --> 
+	<div id="SceneNateLogin" style="visibility:hidden;">
+		<div class="box_login">
+			<div class="login_top">
+				<div class="login_top_nate">
+					<!-- 포커스 되면 아래 예시처럼 focus 클래스 추가해 주세요^^ -->
+					<div class="title_nate"><div id="n_title_nate"></div></div>
+					<div class="title_cyworld"><div id="n_title_cyworld"></div></div>
+				</div>
+			</div>
+			<p class="info">
+				아이디가 이메일 형태일 때는<br />
+				'@' 이하 주소를 모두 입력하세요.
+			</p>
+			<div class="login_input">
+				<div class="login_input_nate">
+					<div class="input_wrap">
+						<!-- 포커스되면 아래처럼 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+						<div class="input_type1">
+						<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+							<input type="text" id="n_loginid" maxlength="60" class="input_text1" value=""  />
+						</div>
+						<!-- 메일 선택 선택시, 아래 class="layer_email" display:block 처리해 주세요^^ -->
+						<!--div class="input_type2">
+							<input type="text" id="n_email" class="input_text2" value="" />
+						</div-->
+						<div class="input_type3">
+							<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+							<input type="password" id="n_pw" maxlength="20" class="input_text3" value="" />
+						</div>
+					</div>
+						<!-- 마우스 오버됐을때(!)가 focus 클래스 추가 됩니다. 인풋 영역에 포커스가 되면 ready 클래스 붙여주세요~^^ -->
+					<div class="input_type4">
+						<div class="btn" id="n_btnLogin"></div>
+					</div>
+					<div class="login_check">
+						<!-- 라디오 박스 체크하면 기존 클래스에 check 추가해 주세요. -->
+						<div class="box_radio">
+							<div class="inner">
+								<input type="checkbox" id="n_chkLoginid" name="" value="" /> 아이디 저장
+							</div>
+						</div>
+						<div class="box_radio">
+							<div class="inner">
+								<input type="checkbox" id="n_chkPw" name="" value="" /> 비밀번호 저장
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--div id="SceneCyworldLogin" style="display:none;"-->
+	<div id="SceneCyworldLogin" style="visibility:hidden;">
+		<div class="box_login">
+				<div class="login_top">
+					<div class="login_top_cyworld">
+						<!-- 포커스 되면 아래 예시처럼 focus 클래스 추가해 주세요^^ -->
+						<div class="title_nate"><div id="c_title_nate"></div></div>
+						<div class="title_cyworld"><div id="c_title_cyworld"></div></div>
+					</div>
+				</div>
+				<p class="info">
+					싸이월드 아이디는 이메일 주소 형태로 입력해 주세요
+				</p>
+				<div class="login_input">
+					<div class="login_input_cyworld">
+						<div class="input_wrap">
+							<!-- 포커스되면 아래처럼 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+							<div class="input_type5">
+								<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+								<input type="text" id="c_loginid" maxlength="50" class="input_text5" value=""/>
+							</div>
+							<div class="input_type3">
+								<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+								<input type="password" id="c_pw" maxlength="20" class="input_text3" value="" />
+							</div>
+						</div>
+						<!-- 버튼은 포커스시 아래 이미지 경로를 바꿔주세요. 마우스 오버됐을때(!)가 다른 인풋들의 포커스 표현과 동일합니다. -->
+						<div class="input_type4">
+							<div class="btn" id="c_btnLogin"></div>
+						</div>
+						<div class="login_check">
+							<!-- 라디오 박스 체크하면 기존 클래스에 check 추가해 주세요. -->
+							<div class="box_radio">
+								<div class="inner">
+									<input type="checkbox" id="c_chkLoginid" name="" value="" /> 아이디 저장
+								</div>
+							</div>
+							<div class="box_radio">
+								<div class="inner">
+									<input type="checkbox" id="c_chkPw" name="" value="" /> 비밀번호 저장
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="SceneNateEmail" style="visibility:hidden;display:none">
+	</div>
+</body>
+</html> 

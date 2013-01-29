@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body {
+	width:1280px; height:720px; margin:0; padding:0; border:0;
+	font-family:LG Display_Eng_Kor, LG Display;
+	background:transparent url("../image/bg/bg_cloud.png") no-repeat left top;
+}
+p, dl, dt, dd, ol, ul, li, form, fieldset, legend, pre, input, textarea, blockquote, th, td {
+	margin: 0; padding: 0;
+}
+ol, ul {
+	list-style-type: none;
+}
+img, fieldset, legend, abbr, acronym {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing:0;
+}
+input, textarea, select {
+	color: #999; font-size:30px; line-height:1.2;
+}
+a {
+	color:#333; text-decoration:none;
+}
+#ScenePhotoSlide {
+	background:transparent url("../image/bg/bg_slide.png") no-repeat left top;
+}

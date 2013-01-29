@@ -1,0 +1,85 @@
+<?
+	$project = (isset($_REQUEST['project'])) ? $_REQUEST['project'] : 'CYPHOTO_LG';
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> LG Unify & Compressor</TITLE>
+  <META name="Generator" content="EditPlus">
+  <META name="Author" content="Soonyoung Park">
+  <META name="Keywords" content="">
+  <META name="Description" content="">
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script type='text/javascript' src='./js/jquery-1.6.2.min.js'></script>
+	<script type='text/javascript' src='./js/dir.config.js'></script>	
+	<script type='text/javascript' src='./js/scripts.<?=$project?>.json.js'></script>
+	<script type='text/javascript' src='./js/function.js'></script>	
+	<style type='text/css'>
+		input, div {
+			font:10pt arial;
+		}
+		input.text{
+			width:100%;
+		}
+		span{
+			margin-left:10px;
+		}
+		span.current_dir{
+			font-weight:bold;
+		}
+		body {
+			margin:20px;
+			font:10pt arial;
+		}
+		div.result{
+			overflow:auto;
+			width:1024px;
+			height:300px;
+		}
+		.dir{
+			margin-bottom:20px;
+		}
+	</style>
+	<script type='text/javascript'>
+	function init(){
+		$('#dir_working input').val(dir.getWorkingDir());
+		$('#dir_working span:first').text(dir.getWorkingDir());
+
+		$('#dir_jade input').val(dir.getJadeDir());
+		$('#dir_jade span:first').text(dir.getJadeDir());
+
+		$('#dir_app input').val(dir.getAppDir());
+		$('#dir_app span:first').text(dir.getAppDir());
+
+		$('#dir_min input').val(dir.getMinDir());
+		$('#dir_min span:first').text(dir.getMinDir());
+	}
+	</script>
+ </HEAD>
+
+<BODY style='margin:0;padding:10px' onload='init()'>
+	<div style='width:100%;height:100%' id='notice'>
+		<div style='background:#660000;color:#ffffff;font-weight:bold;font-size:30pt'>LG Unify & Compressor</div>
+		<div id='execute'>
+			<button onclick='go()'>GO!</button>
+		</div>
+		<div id='options' style='margin-bottom:20px'>
+			<input type='checkbox' checked='true' readonly /> unify <br />
+			<input type='checkbox' checked='true'/> compressing <b style='color:#ff0000'>(may take about 30 sec)</b>
+		</div>
+		<div>
+			<div style='width:300px;height:20px;background:#ffffff;border:solid 1px black'>
+				<div style='position:absolute;font-weight:bold;padding-left:20px'>
+					Loading bar
+				</div>
+				<div style='position:relative;z-index:5;margin:0;padding:0;width:0px;height:20px;background:#0033ff' id='loadingBar'>
+				</div>
+			</div>
+		</div>		
+		<div style='font-size:10pt' id='loadingPercentage'></div>
+		<div id='loading' style='font-size:15pt;color:#ff0000'></div>
+		<div id='result' class='result'>
+		</div>
+	</div>
+ </BODY>
+</HTML>

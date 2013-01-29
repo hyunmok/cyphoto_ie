@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/Gnb.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+<link rel="stylesheet" type="text/css" href="../css/Ime.css" />
+<link rel="stylesheet" type="text/css" href="../css/NateLogin.css" />
+<link rel="stylesheet" type="text/css" href="../css/CyworldLogin.css" />
+<link rel="stylesheet" type="text/css" href="../css/NateEmail.css" />
+</head>
+<body>
+		<!-- GNB -->
+	<div id="SceneGnb">
+		<div class="gnb">
+			<div class="logo"></div>
+			<ul class="list_gnb">
+				<li class="myphoto basic">내사진첩</li>
+				<li class="pado basic">파도타기</li>
+				<li class="people basic">피플</li>
+				<li class="photo focus">포토</li>
+				<li class="setup select">설정</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="SceneNateLogin" style="display:block;">
+		<div class="box_login">
+			<div class="login_top">
+				<div class="login_top_nate">
+					<!-- 포커스 되면 아래 예시처럼 focus 클래스 추가해 주세요^^ -->
+					<div class="title_nate focus"><div></div></div>
+					<div class="title_cyworld"><div></div></div>
+				</div>
+			</div>
+			<p class="info">
+				싸이월드 사진첩은 로그인 후 이용할 수 있습니다.
+			</p>
+			<div class="login_input">
+				<div class="login_input_nate">
+					<div class="input_wrap">
+						<!-- 포커스되면 아래처럼 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+						<div class="input_type1">
+							<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+							<input type="text" class="input_text1 ready" value=""  />
+						</div>
+						<!-- 메일 선택 선택시, 아래 class="layer_email" display:block 처리해 주세요^^ -->
+						<div class="input_type2" onclick="document.getElementById('SceneNateEmail').style.display='block'; ">
+							<input type="text" class="input_text2" value="empas.com" />
+						</div>
+						<div class="input_type3">
+							<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+							<input type="password" class="input_text3" value="" />
+						</div>
+					</div>
+					<div class="input_type4">
+						<div class="btn"></div>
+					</div>
+					<div class="login_check">
+						<!-- 라디오 박스 체크하면 기존 클래스에 check 추가해 주세요. -->
+						<div class="box_radio check focus">
+							<input type="checkbox" name="" value="" checked="checked" /> <span class="text">아이디 저장</span>
+						</div>
+						<div class="box_radio focus">
+							<input type="checkbox" name="" value="" /> <span class="text">비밀번호 저장</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="SceneCyworldLogin" style="display:none;">
+		<div class="box_login">
+				<div class="login_top">
+					<div class="login_top_cyworld">
+						<!-- 포커스 되면 아래 예시처럼 focus 클래스 추가해 주세요^^ -->
+						<div class="title_nate"><div></div></div>
+						<div class="title_cyworld focus"><div></div></div>
+					</div>
+				</div>
+				<p class="info">
+					싸이월드 사진첩은 로그인 후 이용할 수 있습니다.
+				</p>
+				<div class="login_input">
+					<div class="login_input_cyworld">
+						<div class="input_wrap">
+							<!-- 포커스되면 아래처럼 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+							<div class="input_type5 focus">
+								<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+								<input type="text" class="input_text5 ready" value=""  />
+							</div>
+							<div class="input_type3">
+								<!-- 입력하게 되면 class에 ready 추가해 주세요^^ -->
+								<input type="password" class="input_text3" value="" />
+							</div>
+						</div>
+						<div class="input_type4 focus">
+							<div class="btn"></div>
+						</div>
+						<div class="login_check">
+							<!-- 라디오 박스 체크하면 기존 클래스에 check 추가해 주세요. -->
+							<div class="box_radio check focus">
+								<input type="checkbox" name="" value="" checked="checked" /> <span class="text">아이디 저장</span>
+							</div>
+							<div class="box_radio focus">
+								<input type="checkbox" name="" value="" /> <span class="text">비밀번호 저장</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+	<div id="SceneNateEmail" style="display:none;">
+		<div class="layer_email">
+			<ul class="list_email">
+				<!-- 포커스 되면 class에 focus 추가해 주세요^^ -->
+				<li class="first focus"><div class="inner">nate.com <span class="text_icon">▼</span></div></li>
+				<li><div class="inner">empas.com</div></li>
+				<li class="focus"><div class="inner">lycos.co.kr</div></li>
+				<li><div class="inner">netsgo.com</div></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- ime -->
+	<div id="SceneIme">
+		<div class="box_ime">
+		</div>
+	</div>
+	
+	<!-- Help Bar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help5.png" alt="" class="img_icon" /> <span class="text_icon">이전</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

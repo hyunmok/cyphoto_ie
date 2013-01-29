@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+#SceneNateLogin {
+	position : absolute;
+	left:154px; top:165px;
+}
+.box_login {
+	width:449px; margin:0 0 0 7px;
+}
+.box_login .login_top {
+	margin:0 0 31px 0;
+}
+.box_login .login_top .login_top_nate {
+	overflow:hidden;
+	width:449px; height:70px;
+}
+.box_login .login_top .login_top_nate .title_nate {
+	float:left;
+	width:221px; height:70px;
+	background:url("../image/text/title_nate_on.png") no-repeat left top;
+}
+.box_login .login_top .login_top_nate .title_cyworld {
+	float:left;
+	width:228px; height:70px;
+	background:url("../image/text/title_cyworld_off.png") no-repeat left top;
+}
+.box_login .login_top .login_top_nate .title_nate.focus {
+	background-image:url("../image/text/title_nate_on_focus.png");
+}
+.box_login .login_top .login_top_nate .title_cyworld.focus {
+	background-image:url("../image/text/title_cyworld_off_focus.png");
+}
+.box_login .info {
+	margin: -20px 0 14px 3px;
+	height: 46px;
+	color: #444;
+	font-size: 20px;
+	overflow: hidden;
+}
+#SceneAc input,
+.box_login .login_input input {
+	height:57px; border:1px solid #aeaeae;
+	color:#ababab; font-size:22px; 
+}
+.box_login .login_input .input_type1 {
+	float:left;
+	margin:0 10px 14px 0;
+}
+#SceneAc input,
+.box_login .login_input .input_text1 {
+	width:430px; padding:0 5px; 
+	background:#fff url("../image/bg/bg_input_text1.png") no-repeat left top;
+}
+#SceneAc input.ready,
+.box_login .login_input .input_text1.ready {
+	background:#fff url("../image/bg/bg_input_text1_1.png") no-repeat left top;
+}
+.box_login .login_input .input_type2 {
+	float:left;
+	margin:0 0 6px 0;
+}
+.box_login .login_input .input_text2 {
+	width:122px; padding:0 5px;
+	background:#fff url("../image/bg/bg_input_text2.png") no-repeat left top;
+}
+.box_login .login_input .input_type3 {
+	clear:both;
+	width:442px; margin:0 0 14px 0;
+}
+.box_login .login_input .input_text3 {
+	width:430px; padding:0 5px;
+	background:#fff url("../image/bg/bg_input_text3.png") no-repeat left top;
+}
+.box_login .login_input .input_text3.ready {
+	background:#fff url("../image/bg/bg_input_text3_1.png") no-repeat left top;
+}
+.box_login .login_input .input_type4 {
+	/* position:absolute;
+	left:360px; top:141px; */
+	float:left;
+	padding:0 0 0 1px;
+}
+.box_login .login_input .input_type4 .btn{
+	border-top:1px solid transparent;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	width:442px; height:56px;
+	background:url("../image/btn/btn_login1.png") no-repeat left top;
+}
+.box_login .login_input .input_type4.focus .btn{
+	height:55px;
+	background:url("../image/btn/btn_login1.png") no-repeat left top;
+}.box_login .login_input .input_type5 {
+	width:344px;
+	margin:0 10px 10px 0;
+}
+.box_login .login_input .input_text5 {
+	width:332px; padding:0 5px; 
+	background:#fff url("../image/bg/bg_input_text5.png") no-repeat left top;
+}
+.box_login .login_input .input_text5.ready {
+	background:#fff url("../image/bg/bg_input_text5_1.png") no-repeat left top;
+}
+.box_login .login_input .login_check {
+	clear:both;
+	overflow:hidden;
+	width:420px;
+}
+.box_login .login_input .login_check .box_radio {
+	float:left;
+	color:#ababab; font-size:22px;
+	height:43px; padding:5px 0 0 48px; margin:0 45px 0 0;
+	background:url("../image/icon/icon_login_check_none.png") no-repeat left top;
+}
+.box_login .login_input .login_check .box_radio.check {
+	color:#666;
+	background:url("../image/icon/icon_login_check.png") no-repeat left top;
+}
+.box_login .login_input .login_check .box_radio input {
+	display:none;
+}
+.box_login .login_input .login_check .box_radio.focus {
+    outline: none;
+}
+.box_login .login_input .login_check .box_radio.focus .text {
+    outline:5px solid #f77125;
+}
+
+.box_login .login_input .focus {
+	outline:7px solid #f77125;
+	padding:0;
+}
+.box_login .login_input .focus input {
+	border:1px solid #c94313;
+	/* background:#fff url("../image/bg/bg_input_common.png") repeat-x left top; */
+}
+.box_login .login_input .focus img {
+	border:1px solid #c94313;
+}
+.box_login .login_input .focus .btn {
+	border:1px solid #c94313;
+}
+
+
+#SceneAc {
+	position:absolute;
+	left:0;
+	top:0;
+	width:1119px;
+	height:414px;
+	padding-left:161px;
+	padding-top:306px;
+	z-index:20;
+	background: url("../image/bg/bg70.png") repeat;
+}
+#SceneAc input {
+	width: 430px;
+	padding: 0 5px;
+	background: #FFF url("../image/bg/bg_input_text1_1.png") no-repeat;
+	height: 57px;
+	border: 1px solid #AEAEAE;
+	color: #ABABAB;
+	font-size: 22px;
+}
+#SceneAc ul {
+	width:442px;
+	margin-top:1px;
+}
+#SceneAc li {
+	display:block;
+	height:49px;
+	line-height:49px;
+	padding-left:13px;
+	border:1px solid #aeaeae;
+	margin-top:-1px;
+	font-size:28px;
+	color:#676767;
+	background: #FFF url("../image/bg/bg_input_text1_1.png") no-repeat 0 -5px;
+}
+#SceneAc li.focus {
+	color:#FFF;
+	background: #f46214;
+}

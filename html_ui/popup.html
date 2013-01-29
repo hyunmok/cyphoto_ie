@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/Ime.css" />
+<link rel="stylesheet" type="text/css" href="../css/TextPopup.css" />
+<link rel="stylesheet" type="text/css" href="../css/InputPopup.css" />
+</head>
+<body>
+	<!-- 20110317, dim 영역 수정 되었습니다. -->
+	<!-- 알림용 팝업 -->
+	<div id="SceneTextPopup" style="display:none;">
+		<div class="box_text_popup">
+			<div class="popup_top">
+				<div class="title"><img src="../image/icon/icon_notice.png" alt="" /> 업데이트 되었습니다</div>
+			</div>
+			<div class="popup_contents">
+				<p class="desc_type1">
+					싸이월드 회원 여러분께 보다 편리한<br />
+					서비스를 제공하기 위하여 업데이트 되었습니다. 
+				</p>
+				<p class="desc_type2">
+					Ver. 00.00.00  (0000.00.00)
+				</p>
+				<p class="desc_type3">
+					업데이트 내용 1   Ver. 00.00.00  (0000.00.00)<br />
+					업데이트 내용 2   Ver. 00.00.00  (0000.00.00)<br />
+					업데이트 내용 3   Ver. 00.00.00  (0000.00.00)
+				</p>
+				<p class="desc_type1">
+					항상 노력하는 싸이월드가 되겠습니다.
+				</p>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li class="focus"><span class="text_icon">닫기</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div>
+	</div>
+
+	<!-- 20110317, dim 영역 수정 되었습니다. -->
+	<!-- 입력용 팝업 -->
+	<div id="SceneInputPopup" style="display:block;">
+		<div class="box_input_popup">
+			<div class="contents">
+				<div class="title">
+					알림
+				</div>
+				<div class="description">
+					<div class="warning">
+						비밀번호 불일치
+					</div>
+					설정내용 확인 및 수정을 위해 현재 사용중인<br />
+					네이트 비밀번호를 입력해 주세요.
+					<!-- 일촌/팬의 이름을 입력해 주세요. 등등등.. -->
+				</div>
+				<!-- 일반 입력 input -->
+					<!-- 포커스 되면 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+				<div class="input_type1 focus" style="display:block;">
+					<input type="text" class="input_text1" value=""  />
+				</div>
+				<!-- 설정 영역에서만 쓰이는 input -->
+				<div class="input_setup" style="display:none;">
+					<div class="input_pie pie1">
+						<div class="text_title">
+							아이디
+						</div>
+						<div class="text_email">
+							namename1390@nate.com
+						</div>
+					</div>
+					<div class="input_pie pie2">
+						<div class="text_title">
+							비밀번호
+						</div>
+						<!-- 포커스 되면 기존 클래스에 focus 클래스 추가해 주세요^^ -->
+						<div class="input_type2 focus">
+							<input type="password" class="input_text2" value=""  />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li class="focus"><span class="text_icon">닫기</span></li>
+					<li class=""><span class="text_icon">확인</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div>
+	</div>
+
+	<!-- ime -->
+	<div id="SceneIme">
+		<div class="box_ime">
+		</div>
+	</div>
+
+</body>
+</html>

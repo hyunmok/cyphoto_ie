@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+#ScenePeopleSearchList {
+	position:absolute; left:97px; top:135px;
+}
+.people_search_list {
+	
+}
+.people_search_list .box_contents {
+	margin:0 0 0 4px;
+}
+.people_search_list .list_search {
+	overflow:hidden;
+	width:1120px;
+}
+.people_search_list .list_search li {
+	float:left; position:relative;
+	width:110px; height:94px; margin:8px 22px 30px 8px;
+}
+.people_search_list .list_search .inner {
+	/* width:110px; height:94px;
+	overflow:hidden; */
+	width: 106px; height: 25px; overflow: hidden; padding: 69px 0 0 4px; font-size: 20px; color: white;
+	background: url('../image/bg/bg_black80.png') repeat-x 0 69px;
+}
+.people_search_list .list_search .text_user {
+	position:absolute; z-index:1; left:0; top:71px;
+	width:106px; height:23px; padding:0 0 0 4px;
+	color:#fff; font-size:20px;
+	background:#000;; opacity:0.8;
+}
+.people_search_list .list_search li.focus{
+	outline:7px solid #f77125;
+}
+.people_search_list .list_search li.focus .inner {
+	outline:1px solid #c94313;
+}
+
+/* text_search_result */
+.people_search_list .text_search_result {
+	margin:0 0 20px 0;
+	color:#333; font-size:26px;
+}
+.people_search_list .text_search_result span {
+	color:#50879f;
+}

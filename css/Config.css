@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+#SceneConfig {
+	position : absolute;
+	left:199px; top:116px;
+}
+.box_config {
+	position : absolute; left:0; top:0;
+	width:811px; height:298px; padding:12px 35px 0 35px;
+	background:hsla(0,0%,100%,0.3);
+}
+.box_config .title {
+	padding:0 0 10px 0;
+	color:#404040; font-size:25px;
+}
+.box_config .notice {
+	padding:0 0 8px 0;
+	color:#666; font-size:22px; line-height:1.19;
+}
+.box_config .notice strong {
+	color:#404040; font-weight:normal;
+}
+.box_config .btn_password {
+	margin:0 0 0 94px;
+}
+.box_config .btn_password .inner {
+	height:34px; width:155px; padding:9px 0 0 25px; border:1px solid #bfc3c3;
+	color:#1b5f7d; font-size:20px;
+	background:url("../image/bg/bg_btn_common.png") repeat-x left top;
+}
+.box_config .btn_password.focus {
+	outline:7px solid #f77125;
+	width:180px;
+}
+.box_config .btn_password.focus .inner {
+	border:1px solid #c94313;
+}
+.box_config .btn_password.none .inner {
+	height:34px; width:155px; padding:9px 0 0 25px; border:1px solid #bfc3c3;
+	color:#999; font-size:20px;
+	background:url("../image/bg/bg_btn_common.png") repeat-x left top;
+}
+
+.box_config .list_setup {
+	margin:11px 0 0 52px;
+}
+.box_config .list_setup li {
+    overflow:hidden;
+    width:640px; height:50px; margin:0 0 4px 0;
+}
+.box_config .list_setup li .box_input {
+    float:left; 
+    width:29px; height:28px; padding:0 6px 10px 0;
+}
+.box_config .list_setup li .box_info {
+    float:left; position:relative;
+    width:598px; padding:7px 0 0 7px;
+}
+.box_config .list_setup li .box_input input {
+    display:none;
+}
+.box_config .list_setup li .box_info {
+	font-size:20px;
+}
+.box_config .list_setup li .box_info .img_character {
+	vertical-align:middle;
+}
+.box_config .list_setup.none .box_input {
+	background:url('../image/icon/icon_radio_none.png') no-repeat 0 10px;
+}
+.box_config .list_setup.none .box_info {
+	color:#999;
+}
+.box_config .list_setup.select .box_input {
+	background:url('../image/icon/icon_radio_select.png') no-repeat 0 10px;
+}
+.box_config .list_setup.select .focus .box_input {
+	background:url('../image/icon/icon_radio_focus.png') no-repeat 0 10px;
+}
+.box_config .list_setup.select .box_info {
+	color:#404040;
+}
+.box_config .list_setup.select .box_info .view_all,
+.box_config .list_setup.select .box_info .view_1chon,
+.box_config .list_setup.select .box_info .view_secret {
+	color:#f35719;
+} 
+.box_config .list_setup.select .focus .box_info {
+    background-color:#f76d23;   
+}
+.box_config .list_setup.select .focus .box_info .text2 {
+	color:#fff;
+}
+.box_config .list_setup.select .focus .box_info .text2 .view_all {
+    color:#f0ff4b;
+}
+.box_config .list_setup.select .focus .box_info .text2 .view_1chon {
+    color:#f8ffad;
+}
+.box_config .list_setup.select .focus .box_info .text2 .view_secret {
+    color:#f2f1f1;
+}

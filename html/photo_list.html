@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<title>cyworld</title>
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoListNone.css" />
+	<link rel="stylesheet" type="text/css" href="../css/Folder.css" />
+
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script> 
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/GnbComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PopupComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PhotoListComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/PagingComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.widget.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.mouse.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery_ui/jquery.ui.slider.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/ScrollComponent.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/FolderModel.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/FolderController.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/MinihpInfoModel.js'></script>	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PhotoModel.js'></script>	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoListController.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../js/zone/photo_list.js'></script>
+
+<?
+} else {
+?>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoList.css" />
+	<link rel="stylesheet" type="text/css" href="../css/PhotoListNone.css" />
+	<link rel="stylesheet" type="text/css" href="../css/Folder.css" />
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/photo_list-min_live.js'></script>
+<?
+}
+?>
+
+	<script type='text/javascript'>
+		var params = {
+			itemNo : 0,
+			targetId : '',
+			folderNo : '',
+		}
+		skFn.dom.addEvent(window, 'load', init);
+
+		function init(){
+			skFn.console.off();
+			skFn.console.setupConsole({consoleTop:292, consoleOpacity:0.5, consoleWidth:320, consoleHeight:300});
+			//========== 변수 세팅 ==========
+
+			var urlParams = {};
+			urlParams = skFn.string.parse_UrlStr();
+			
+			if(urlParams.itemNo)	params.itemNo	=	urlParams.itemNo;
+			if(urlParams.targetId)	params.targetId	=	urlParams.targetId;
+			else	params.targetId = skFn.user.getUserTid();
+			if(urlParams.folderNo)	params.folderNo =	urlParams.folderNo;
+			if(urlParams.folderName)	params.folderName =	decodeURIComponent(urlParams.folderName);
+
+
+			//========== 변수 세팅 ==========
+
+
+			//========== Gnb Display ==========
+			
+			// 기능키 정의가 필요한 부분에만 추가
+			GnbComponent.setFunctionKey("skTv.keymap.RED", "zone.PhotoList.handleKeyDown(skTv.keymap.RED);");
+			GnbComponent.setFunctionKey("skTv.keymap.GREEN", "zone.PhotoList.handleKeyDown(skTv.keymap.GREEN);");
+			GnbComponent.setFunctionKey("skTv.keymap.RETURN", "zone.PhotoList.handleKeyDown(skTv.keymap.RETURN);");
+			GnbComponent.setFunctionKey("skTv.keymap.FF", "zone.PhotoList.handleKeyDown(skTv.keymap.FF);");
+			GnbComponent.setFunctionKey("skTv.keymap.RW", "zone.PhotoList.handleKeyDown(skTv.keymap.RW);");
+			GnbComponent.show(GnbComponent);
+
+
+
+
+			//========== Helpbar Display ==========
+			var arrMenuInfo = new Array();
+			arrMenuInfo.push({icon:'icon_help4',name:'폴더선택', action:'zone.PhotoList.handleKeyDown(skTv.keymap.RED);'});
+			arrMenuInfo.push({icon:'icon_help2',name:'슬라이드쇼', action:'zone.PhotoList.handleKeyDown(skTv.keymap.GREEN);'});
+			arrMenuInfo.push({icon:'icon_help5',name:'이전', action:'PhotoListController.gotoPrev();'}); 
+			arrMenuInfo.push({icon:'icon_help6',name:'나가기', action:'navigation.gotoExit();'}); 
+
+			HelpComponent.show(arrMenuInfo);
+
+			//========== Loading Display Dom 추가==========
+			LoadingComponent.init();
+
+			//========== Zone 초기화 및 Show ==========
+			skTv.zone.init();
+			skTv.zone.show('PhotoList');
+			skTv.zone.focus('PhotoList');
+			
+			skFn.dom.addEvent(document.getElementById('li_close_folder'), 'mouseover', function(){
+				document.getElementById('li_close_folder').className='focus';
+			});
+			skFn.dom.addEvent(document.getElementById('li_close_folder'), 'mouseout', function(){
+				document.getElementById('li_close_folder').className='';
+			});
+		}
+	</script>
+
+</head>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+
+	<!-- 사진첩 리스트 -->
+	<div id="ScenePhotoList" style='visibility:hidden;display:none'>
+		<div class="myphoto_list">
+			<div class="nav_folder">
+				<span id="PhotoUserName"></span>님의 사진첩 &gt; <span id = "FolderName">전체보기</span>
+			</div>
+
+			<!--div class="photo_list" style="display:block;"-->
+			<div class="photo_list">
+				<!-- 리스트 이전,다음 보기 관련해서 list_prev, list_next는 그대로 두시고 뒤에 새롭게 클래스 추가해주세요^^-->
+				<!-- 아래 예시처럼 _off, _on 으로 작업했습니다. -->
+				<div id="BtnPrev" class="list_prev list_prev_off"></div>
+				<div class="box_album_list">
+					<ul class="album_list" id="ul_photo">
+					<!-- 포커스 되면 class="focus" 추가해 주세요 -->
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt=""/>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<li class='focus'>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt=""/>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class=""><strong></strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<!-- 리스트의 가운데 아이템만 class 들어가 있습니다^^ -->
+						<li class="second">
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<!-- 이미지가 세로로 긴 경우는 img 태그에 height="300" 넣어주세요. -->
+											<img src="../image/img/img_photo_list_none.jpg" alt="" />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="middle" height="300">
+											<img src="../image/img/img_photo_list_none.jpg" alt=""  />
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="info">
+								<div class="text">
+									<div class="title"></div>
+									<div class="date"></div>
+								</div>
+								<!-- 댓글 숫자가 2000개가 넘어가면 class="num1" 으로 바꿔주시고 출력되는 텍스트는 1999로 고정시켜 주세요^^ -->
+								<div class="num"><strong></strong></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="BtnNext" class="list_next list_next_off"></div>
+				<!--div class="text_sum" style="display:block;"-->
+				<div class="text_sum">
+					<span class="num" id='PageNum'></span> <span class="total" id='TotalCount'></span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 사진이 없는 경우 -->
+	<!-- 사진이 없는 경우 -->
+	<!--div id="ScenePhotoListNone" style='display:none'-->
+	<div id="ScenePhotoListNone" style='visibility:hidden;'>
+		<div class="photo_none">
+			<!--div class="nav_folder" style='display:none'-->
+			<div class="nav_folder" style='visibility:hidden;'>
+				<span id = "PhotoUserNameNone">사용자</span>님의 사진첩 &gt; <span id = "FolderNameNone">전체보기</span>
+			</div>
+			<div class="description">등록된 사진이 없습니다.</div>
+			<div class="box_img focus">
+				<div class="inner"><img src="../image/btn/btn_folder.png" alt="" /></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 폴더 선택 레이어 -->
+	<!--div id="SceneFolder" style="display:none;"-->
+	<div id="SceneFolder" style="visibility:hidden;">
+		<div class="popup_select_folder">
+			<div class="popup_top">
+				<img src="../image/text/title_folder_select.png" alt="사진첩 폴더 선택" />
+			</div>
+			<div class="popup_contents"> 
+				<ul id='ul_list_select_folder' class="list_select_folder">
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li>전체보기 <span class="text_num">0</span> <!-- <img src="../image/icon/icon_new.png" alt="new" /> --></li>
+				</ul>
+				<div class="box_scroll" id="Folder_scroll">
+					<div class="scroll">
+						<img src="../image/btn/btn_drag.png" alt="" class="img_drag" />
+					</div>
+					<div class="bg_scroll">
+						<div class=""></div>
+					</div> 
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<ul class="list_helpbar">
+					<!-- float:right; 스타일 때문에 li를 반대로 출력해 주셔야 합니다^^;;; -->
+					<!-- 포커스시 아래 예시처럼 class="focus" 추가해 주세요^^ -->
+					<li id='li_close_folder'><span class="text_icon">닫기</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dim"></div>
+	</div>
+
+</body>
+</html>

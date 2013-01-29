@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+
+<?
+//if(stripos($_SERVER['SERVER_NAME'], "lg.tvapp.nate.com") == false || $_SERVER['SERVER_PORT'] != '80' ) {
+if($_SERVER['SERVER_PORT'] != '80' ) {
+?>
+
+<link rel="stylesheet" type="text/css" href="../css/common_photo_slide.css" />
+<link rel="stylesheet" type="text/css" href="../css/PhotoSlide.css" />
+<link rel="stylesheet" type="text/css" href="../css/Folder.css" />
+<!--link rel="stylesheet" type="text/css" href="../css/Helpbar.css" /-->
+
+	<script type='text/javascript' language='javascript' src='../js/netcast_info.js'></script> 
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/vendors/jquery-1.4.4.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/env_config.lg.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/api_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/thumb_config.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/config/init.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/class.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/string.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/array.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/dom.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/debug.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/console.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/xhr.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.fn.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.keymap.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.zone.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/cookies.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/user.js'></script> 
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/libs/tv.gateway.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseControllerClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseModelClass.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/bases/BaseComponentClass.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/HelpComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PopupComponent.js'></script>
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/components/PhotoListComponent.js'></script>
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/skTvFrw/components/LoadingComponent.js'></script>
+	
+	<script type='text/javascript' language='javascript' src='../js/navigation.js'></script>
+
+
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/models/PhotoModel.js'></script>	
+	<script type='text/javascript' language='javascript' src='../skcomms_r6185/projects/cyphoto/controllers/PhotoSlideController.js'></script>
+	<script type='text/javascript' language='javascript' src='../js/zone/photo_slide.js'></script>
+
+<?
+} else {
+?>
+<link rel="stylesheet" type="text/css" href="../css/common_photo_slide.css" />
+<link rel="stylesheet" type="text/css" href="../css/PhotoSlide.css" />
+<link rel="stylesheet" type="text/css" href="../css/Folder.css" />
+	<!--script type='text/javascript' language='javascript' src='../css/blog_photo_list.css'></script-->
+	<script type='text/javascript' language='javascript' src='../js/_mini/photo_slide-min_live.js'></script>
+<?
+}
+?>	
+
+	<script type='text/javascript'>
+		var params = {
+			itemNo : 0,
+			targetId : '',
+			folderNo : '',
+			themeId : '0000',
+			itemCount : '',
+			referrer : ''	
+		}
+		skFn.dom.addEvent(window, 'load', init);
+		
+		function init(){
+
+			skFn.console.off();
+
+			skFn.console.setupConsole({consoleTop:292, consoleOpacity:0.5, consoleWidth:320, consoleHeight:300});
+			skTv.zone.init();
+			//========== 변수 세팅 ==========
+
+			var urlParams = {};
+			urlParams = skFn.string.parse_UrlStr();
+			
+			if(urlParams.itemNo)	params.itemNo	=	urlParams.itemNo;
+			if(urlParams.targetId)	params.targetId	=	urlParams.targetId;
+			if(urlParams.folderNo)	params.folderNo =	urlParams.folderNo;
+			if(urlParams.folderName)	params.folderName =	decodeURIComponent(urlParams.folderName);
+			
+			// memory leak 문제로 추가(5/31 by sophia)
+			if(urlParams.itemCount)	params.itemCount =	urlParams.itemCount;			// 1장보기, 2장보기
+			if(urlParams.referrer)	params.referrer =	urlParams.referrer;
+			
+
+			//========== Helpbar Display ==========
+			// HelpComponent Fade 효과 세팅
+			HelpComponent.set_fadeInfo(5000, 
+										function(){
+											$("#BtnPrev").css("visibility", "hidden");
+											$("#BtnNext").css("visibility", "hidden");
+										},
+										function(){
+											$("#BtnPrev").css("visibility", "visible");
+											$("#BtnNext").css("visibility", "visible");
+										}
+			);
+			
+			var arrMenuInfo = new Array();
+			
+			//memory leak 문제로 추가(5/31 by sophia)
+			if(urlParams.itemCount == "2")	{
+				arrMenuInfo.push({icon:'icon_help4',name:'1장보기', action:'zone.PhotoSlide.handleKeyDown(skTv.keymap.RED);'});
+			} else {
+				arrMenuInfo.push({icon:'icon_help4',name:'2장보기', action:'zone.PhotoSlide.handleKeyDown(skTv.keymap.RED);'});
+			}			
+			arrMenuInfo.push({icon:'icon_help7',name:'멈춤', action:'PhotoSlideController.toggleSlide(PhotoSlideController);'});
+			arrMenuInfo.push({icon:'icon_help5',name:'이전 ', action:'zone.PhotoSlide.handleKeyDown(skTv.keymap.RETURN);'}); 
+
+			HelpComponent.show(arrMenuInfo, "opacity:40%;");
+			
+			
+			
+			//========== Loading Display Dom 추가==========
+			LoadingComponent.init();
+			
+			//memory leak 문제로 추가 => ScenePhotoSlide zone에 동적으로 생성(5/31 by sophia)
+			var DivPhotoSlide = "			<div class='photo_slide'>" +
+								"				<div class='photo_view' style='visibility:visible'>" +
+								"					<img alt='' valign='middle' style='visibility:hidden'/>" +
+								"					<img alt='' valign='middle' style='visibility:hidden'/>" +
+								"				</div>" +
+								"				<div class='photo_view_ctl'>" +
+								"					<div class='right' id='BtnNext'></div>" +
+								"					<div class='left' id='BtnPrev'></div>" +
+								"				</div>" +
+								"			</div>";
+			
+			$("#ScenePhotoSlide").html(DivPhotoSlide);
+			
+			//========== 변수 세팅 ==========
+			skTv.zone.show('PhotoSlide');
+			skTv.zone.focus('PhotoSlide');
+
+			LoadingComponent.setIsLoadingImg(true);
+			
+			//memory leak이 발생할 경우 호출할 이벤트 등록(5/31 by sophia)
+			window.addEventListener("outofmemory", replySlideshow, false);
+		}
+
+		//memory leak event 발생시 호출되는 함수 (5/31 by sophia)
+		function replySlideshow(event) {
+			// 포토 슬라이드인 경우 무조건 play mode로 세팅한다.
+			if(PhotoListComponent.getParam('folderNo').length == 4 && PhotoListComponent.getParam('folderNo').substring(0, 1) == '0'){
+				params.folderName = "play";
+			}
+
+			navigation.gotoPhotoSlide_null(PhotoListComponent.getParam('targetId'), PhotoListComponent.getParam('folderNo'), encodeURIComponent(params.folderName) ,PhotoListComponent.getItemNo(PhotoSlideController._get('itemIndex')), true, PhotoSlideController.getItemCount(), params.referrer);
+		}
+
+	</script>
+</head>
+<body style='width:1280px; height:720px; overflow:hidden;' ondragstart='return false' onselectstart='return false'>
+	<!-- 슬라이드-->
+	<div id="ScenePhotoSlide">
+	</div>
+</body>
+</html>

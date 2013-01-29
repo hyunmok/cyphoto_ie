@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+#SceneFolder {
+	position:relative; left:0; top:0;
+}
+.popup_select_folder {
+	position:absolute; z-index:12; left:357px; top:63px;
+}
+.popup_select_folder .popup_top {
+    height:73px; padding:25px 0 0 0;
+	text-align:center;
+    background:url(../image/popup/bg_popup_select_folder_top.png) no-repeat left bottom;
+}
+.popup_select_folder .popup_contents {
+    background:url(../image/popup/bg_popup_select_folder_wrap.png) repeat-y left bottom;
+}
+.popup_select_folder .popup_bottom {
+    height:80px;
+    background:url(../image/popup/bg_popup_select_folder_bottom.png) no-repeat left bottom;
+}
+.popup_select_folder .popup_contents {
+    overflow:hidden; position:relative;
+    width:572px; height:425px;
+}
+.popup_select_folder .list_select_folder {
+    width:498px; height:425px; margin:0 0 0 4px;
+}
+.popup_select_folder .list_select_folder li {
+    overflow:hidden;
+    padding:22px 28px 0 28px; width:442px; height:48px; border-bottom:1px solid #cecece;
+    color:#666; font-size:24px;
+	text-overflow: ellipsis; white-space : nowrap;
+}
+.popup_select_folder .list_select_folder li.last {
+	border:none;
+}
+.popup_select_folder .list_select_folder li .text_view {
+    color:#ccc;
+}
+.popup_select_folder .list_select_folder li .text_num {
+    color:#86d3ed;
+}
+.popup_select_folder .list_select_folder li.focus {
+    color:#fff;
+    background-color:#f77024;
+}
+.popup_select_folder .list_select_folder li.focus span {
+    color:#fff;
+}
+.popup_select_folder .box_scroll {
+	position:absolute; left:510px; top:39px;
+}
+.popup_select_folder .popup_bottom .list_helpbar li {
+	margin-top:1px; 
+}
+/* scroll */
+.popup_select_folder .box_scroll .bg_scroll {
+	width:40px; height:360px;
+	background:url("../image/popup/bg_popup_scroll.png") no-repeat center top;
+}
+.popup_select_folder .box_scroll .bg_scroll.focus {
+	background:url("../image/popup/bg_popup_scroll_focus.png") no-repeat center top;
+}
+.popup_select_folder .box_scroll .scroll {
+	position:absolute; left:0; top:-20px /* 380px */; z-index:2000;
+	width:40px; height:40px;
+}
+.popup_select_folder .box_scroll .scroll img {
+	position:absolute; left:0; top:0;
+}
+.popup_select_folder .box_scroll .bg_scroll .ui-slider {
+ position:absolute;
+ width:40px; height:360px;
+}
+
+/* popup, helpbar */
+.popup_bottom .list_helpbar {
+	overflow:hidden;
+	margin:0 26px 0 0;
+}
+.popup_bottom .list_helpbar li {
+	float:right;
+	width:108px; height:48px; padding:22px 0 0 0; border:none;
+	color:#fff; text-align:center; font-size:24px;
+}
+.popup_bottom .list_helpbar li.focus {
+	background:url("../image/popup/bg_popup_helpbar2_focus.png") no-repeat left top;
+}
+
+.dim {
+	position:absolute; z-index:8; left:0; top:0;
+	width:1280px; height:720px;
+	background:#000;
+	opacity:0.7;
+}

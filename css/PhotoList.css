@@ -1,0 +1,109 @@
+@charset "utf-8";
+#ScenePhotoList {
+	position:absolute; left:32px; top:100px; z-index:1; overflow:hidden; 
+	width:1216px; height:527px;
+}
+.myphoto_list .nav_folder {
+	overflow:hidden;
+	padding:23px 0 0 56px;
+	color:#333; font-size:20px;
+}
+.myphoto_list .photo_list {
+	overflow:hidden;
+	width:1216px; height:;
+}
+.myphoto_list .photo_list .list_prev {
+	float:left;
+	width:26px; height:42px; margin:191px 0 0 13px;
+}
+.myphoto_list .photo_list .box_album_list {
+	position:relative; float:left; overflow:hidden;
+	width:1130px; height:434px; margin:12px 0 0 10px;
+}
+.myphoto_list .photo_list .list_next {
+	float:left;
+	width:26px; height:42px; margin:191px 0 0 -3px;
+}
+
+.myphoto_list .photo_list .box_album_list .album_list {
+    width:3390px; height:434px;
+}
+.myphoto_list .photo_list .album_list li {
+    float:left; position:relative; left:-1130px;
+    width:368px; height:434px;
+    background:url("../image/bg/bg_frame_off.png") no-repeat 8px 8px;
+}
+.myphoto_list .photo_list .album_list li.second {
+    margin:0 13px;
+}
+.myphoto_list .photo_list .album_list li.focus {
+    background:url('../image/bg/bg_frame_on.png') no-repeat left top;
+}
+
+.myphoto_list .photo_list .album_list li .box {
+	padding:22px 0 0 22px;
+    text-align:center;
+}
+.myphoto_list .photo_list .album_list li .box table {
+	width:310px;
+}
+.myphoto_list .photo_list .album_list li .box table td {
+	text-align:center;
+}
+
+.myphoto_list .photo_list .album_list li .info {
+	overflow:hidden;
+    width:338px;
+}
+.myphoto_list .photo_list .album_list li .text {
+    float:left;
+    width:244px; padding:23px 0 0 18px;
+}
+.myphoto_list .photo_list .album_list li .num {
+    float:right; 
+    width:54px; height:34px; margin:20px 0 0 0; padding:8px 0 0 0;
+    color:#f35719; font-size:20px; text-align:center;
+    background:url('../image/icon/icon_num1.png') no-repeat left top;
+}
+.myphoto_list .photo_list .album_list li .num1 {
+    float:right;
+    width:53px; height:37px; margin:16px 0 0 0; padding:13px 5px 0 0;
+    color:#f35719; font-size:20px; text-align:center;
+    background:url('../image/icon/icon_num2.png') no-repeat left top;
+}
+.myphoto_list .photo_list .album_list li .text .title {
+    overflow:hidden;
+    width: 244px;
+    color:#333; font-size:30px; text-overflow: ellipsis; white-space : nowrap;
+}
+.myphoto_list .photo_list .album_list li .text .date {
+    margin:2px 0 0 2px; 
+    color:#50879f; font-size:20px;
+}
+.myphoto_list .photo_list .album_list li .text .date .time {
+	margin-left:3px;
+}
+.myphoto_list .photo_list .list_prev_off {
+    background:url('../image/btn/btn_prev_off.png') no-repeat left top;
+}
+.myphoto_list .photo_list .list_prev_on {
+    background:url('../image/btn/btn_prev_on.png') no-repeat left top;
+}
+.myphoto_list .photo_list .list_next_off {
+    background:url('../image/btn/btn_next_off.png') no-repeat left top;
+}
+.myphoto_list .photo_list .list_next_on {
+    background:url('../image/btn/btn_next_on.png') no-repeat left top;
+}
+
+.myphoto_list .text_sum {
+	clear:both;
+	margin:10px 0 0 54px;
+    font-size:20px;
+}
+.myphoto_list .text_sum .num {
+	color:#1b5f7d;
+}
+.myphoto_list .text_sum .total {
+	color:#fff;
+}

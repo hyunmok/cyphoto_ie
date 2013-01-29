@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>cyworld</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/StockCategory.css" />
+<link rel="stylesheet" type="text/css" href="../css/StockList.css" />
+<link rel="stylesheet" type="text/css" href="../css/Gnb.css" />
+<link rel="stylesheet" type="text/css" href="../css/Helpbar.css" />
+<script type="text/javascript" src="../js/jquery-1.4.4.js"></script>
+<script type="text/javascript"> 
+function ani() {
+	$('#ul_list_stock li').animate({left:-2264}, 500, 'swing', function(){
+		});
+}
+function re_ani() {
+	$('#ul_list_stock li').animate({left:0}, 500, 'swing', function(){
+		});
+}
+</script>
+</head>
+<body>
+	<!-- gnb -->
+	<div id="SceneGnb">
+		<div class="gnb">
+			<div class="logo"></div>
+			<ul class="list_gnb">
+				<li class="myphoto basic">내사진첩</li>
+				<li class="pado basic">파도타기</li>
+				<li class="people basic">피플</li>
+				<li class="photo focus">포토</li>
+				<li class="setup select">설정</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 카테고리 선택 메뉴 -->
+	<div id="SceneStockCategory">
+		<!-- 모션 리모콘으로 작동시에만 오버 효과 class 추가해 주세요^^ -->
+		<div class="box_stock_category" style="display:block;">
+			<ul class="list_stock_category">
+				<!-- 첫번째 li에 class="first" 들어가 있습니다^^ -->
+				<!-- 포커스 되면 class focus 추가해 주세요^^ -->
+				<!-- 모션 리모콘으로 작동시에만 오버 효과 class 적용해 주세요^^ -->
+				<li class="first"><div class="inner">전체보기</div></li>
+				<li class="focus"><div class="inner">인물</div></li>
+				<li><div class="inner">풍경/자연</div></li>
+				<li><div class="inner">동물/식물</div></li>
+				<li><div class="inner">여행/출사</div></li>
+				<li class="over"><div class="inner">기타/일</div></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 사진 리스트 -->
+	<div id="SceneStockList">
+		<div class="box_stock_contents">
+			<!-- 리스트 이전,다음 보기 관련해서 list_prev, list_next는 그대로 두시고 뒤에 새롭게 클래스 추가해주세요^^-->
+			<!-- 아래 예시처럼 _off, _on 으로 작업했습니다. -->
+			<div class="list_prev list_prev_off" onclick="re_ani();"></div>
+			<div class="box_stock_list">
+				<ul class="list_stock" id="ul_list_stock">
+				<!-- 포커스 되면 class="focus" 추가해 주세요 -->
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 가로로 긴 경우는 img 태그에 width="220" 넣어주세요. -->
+										<img src="../image/img/img_null4.png" alt="" width="220" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사 일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li class="focus">
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 세로로 긴 경우는 img 태그에 height="213" 넣어주세요. -->
+										<img src="../image/img/img_null3.png" alt="" height="213" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 없거나 오류난 경우, 아래 주소의 이미지 사용해 주세요 -->
+										<img src="../image/img/img_blog_photo_list_none.jpg" alt="" height="213" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+										<img src="../image/img/img_null1.png" alt="" width="220" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 가로로 긴 경우는 img 태그에 width="220" 넣어주세요. -->
+										<img src="../image/img/img_null4.png" alt="" width="220" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사 일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li class="focus">
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 세로로 긴 경우는 img 태그에 height="213" 넣어주세요. -->
+										<img src="../image/img/img_null3.png" alt="" height="213" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<img src="../image/img/img_null2.png" alt="" height="213" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="middle" height="213">
+										<!-- 이미지가 가로로 긴 경우는 img 태그에 width="310" 넣어주세요. -->
+										<img src="../image/img/img_null1.png" alt="" width="220" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info">
+							<div class="text">
+								<div class="title">일이삼사 일이삼사</div>
+								<div class="user">박민재</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_next list_next_on" onclick="ani();"></div>
+			<div class="text_sum" style="display:block;">
+				<span class="num">1/425</span> <span class="total">(총1280장)</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- helpbar -->
+	<div id="SceneHelpbar">
+		<div class="helpbar">
+			<div class="user_name">사용자 LIMA</div>
+			<ul class="list_icon">
+				<!-- 글자 수대로 다르게 bg가 깔려있습니다. 글자수대로 focus+num 부탁드려요 ^^ -->
+				<li><div class="key5 focus5"><img src="../image/icon/icon_help2.png" alt="" class="img_icon" /> <span class="text_icon">슬라이드쇼</span></div></li>
+				<li><div class="key2 focus2"><img src="../image/icon/icon_help5.png" alt="" class="img_icon" /> <span class="text_icon">이전</span></div></li>
+				<li><div class="key3"><img src="../image/icon/icon_help6.png" alt="" class="img_icon" /> <span class="text_icon">나가기</span></div></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

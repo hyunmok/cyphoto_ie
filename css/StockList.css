@@ -1,0 +1,80 @@
+@charset "utf-8";
+#SceneStockList {
+	position:absolute; left:45px; top:223px; overflow:hidden; 
+}
+.box_stock_contents {
+	overflow:hidden;
+	width:1190px;
+}
+.box_stock_contents .list_prev {
+	float:left;
+	width:26px; height:42px; margin:122px 11px 0 0;
+}
+.box_stock_contents .box_stock_list {
+	position:relative; float:left; overflow:hidden;
+	width:1132px; height:330px;
+}
+.box_stock_contents .list_next {
+	float:left;
+	width:26px; height:42px; margin:122px 0 0 -5px;
+}
+
+.box_stock_contents .list_stock {
+	width:3396px /*1132px*/; height:340px;
+}
+
+.box_stock_contents .list_stock li {
+    float:left; position:relative; left:-1132px;
+    width:283px; height:340px;
+    background:url("../image/bg/bg_people_frame_off.png") no-repeat 8px 8px;
+}
+.box_stock_contents .list_stock li.focus {
+    background:url('../image/bg/bg_people_frame_on.png') no-repeat left top;
+}
+.box_stock_contents .list_stock li .box {
+	padding:22px 0 0 22px;
+    text-align:center;
+}
+.box_stock_contents .list_stock li .box table {
+	width:220px;
+}
+.box_stock_contents .list_stock li .box table td {
+	text-align:center;
+}
+
+.box_stock_contents .list_stock li .info {
+    width:218px; padding:10px 0 0 22px;
+}
+.box_stock_contents .list_stock li .text .title {
+    overflow:hidden;
+    width: 218px;
+    color:#333; font-size:26px; text-overflow: ellipsis; white-space : nowrap;
+}
+.box_stock_contents .list_stock li .text .user {
+    margin:0 0 0 2px; 
+    color:#50879f; font-size:20px;
+}
+.box_stock_contents .list_prev_off {
+    background:url('../image/btn/btn_prev_off.png') no-repeat left top;
+}
+.box_stock_contents .list_prev_on {
+    background:url('../image/btn/btn_prev_on.png') no-repeat left top;
+}
+.box_stock_contents .list_next_off {
+    background:url('../image/btn/btn_next_off.png') no-repeat left top;
+}
+.box_stock_contents .list_next_on {
+    background:url('../image/btn/btn_next_on.png') no-repeat left top;
+}
+
+.box_stock_contents .text_sum {
+	clear:both;
+	margin:0 54px 0 0;
+    font-size:20px; text-align:right;
+}
+.box_stock_contents .text_sum .num {
+	color:#1b5f7d;
+}
+.box_stock_contents .text_sum .total {
+	color:#fff;
+}
