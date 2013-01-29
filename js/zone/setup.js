@@ -54,7 +54,7 @@
 	                    }
 					}
 			},
-			
+
 			Logout : {
 
 				initialize : function(){
@@ -129,16 +129,16 @@
 
 						case skTv.keymap.LEFT:
 							SetupController.move("LEFT");
-							break;							
+							break;
 
 						case skTv.keymap.RIGHT:
 							SetupController.move("RIGHT");
 							break;
-						
+
 						case skTv.keymap.UP:
 							SetupController.move("UP");
-							break;							
-														
+							break;
+
 						case skTv.keymap.DOWN:
 							SetupController.move("DOWN");
 							break;
@@ -189,6 +189,5 @@
 					}
 				}
 			}
-		}	
+		}
 	}
-		
